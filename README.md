@@ -13,10 +13,10 @@
 
 - [x] Viikko 2
 
-  [maksukortti](),
-  [unicafe](),
-  [vaatimusmäärittely]() &
-  [tuntiaikakirjanpito]()
+  [maksukortti](https://github.com/riikkayoki/ot-harjoitustyo/tree/master/laskarit/viikko2/maksukortti),
+  [unicafe](https://github.com/riikkayoki/ot-harjoitustyo/tree/master/laskarit/viikko2/unicafe),
+  [vaatimusmäärittely](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/vaativuusmaarittely.md) &
+  [tuntiaikakirjanpito](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/tyoaikakirjanpito.md)
 
 
 - [ ] Viikko 3
@@ -50,10 +50,10 @@ Sovelluksen toiminta on testattu Python 3.8.10 versiolla.
 -------------------------------
 
 * [Käyttöohje]()
-* [Vaatimusmäärittely]()
+* [Vaatimusmäärittely](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/vaativuusmaarittely.md)
 * [Arkkitehtuurikuvaus]()
 * [Testausdokumentti]()
-* [Työaikakirjanpito]()
+* [Työaikakirjanpito](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/tyoaikakirjanpito.md)
 
 ##Asennus
 

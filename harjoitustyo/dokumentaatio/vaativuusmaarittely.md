@@ -15,7 +15,7 @@ Tässä sovelluksessa on vain yhden tyyppisiä käyttäjiä eli pelaajia.
 ## Käyttöliittymä luonnos
 ________________________________
 
-![tetrisdevelopment](../../../Desktop/Screenshot from 2021-11-12 17-30-43.jpg)
+![tetrisdevelopment](./kuvat/vaativuusmaarittelu_kuva.jpg)
 
 Sovelluksen käyttöliittymä muodostuu neljästä erilaisesta komponentista:
 
