@@ -5,7 +5,7 @@ _____________________
 
 --------------------------------------
 
-Sovellus on versio perinteisestä Tetris -pelistä. 
+Sovellus on versio perinteisestä Matopelistä. 
 
 ## Käyttäjät
 _______________________________________________________
@@ -15,7 +15,6 @@ Tässä sovelluksessa on vain yhden tyyppisiä käyttäjiä eli pelaajia.
 ## Käyttöliittymä luonnos
 ________________________________
 
-![tetrisdevelopment](./kuvat/vaativuusmaarittelu_kuva.jpg)
 
 Sovelluksen käyttöliittymä muodostuu neljästä erilaisesta komponentista:
 
@@ -37,33 +36,23 @@ Päädymme tämän valikon jälkeen taas päävalikkoon.
 
 ## Perusversion tarjoama toiminnallisuus
 ___________________________________
- * Pelissä on 7 erilaista palaa. 
-   * Kullakin palalla on oma värinsä.
+ * Pelissä on mato. 
+   * Madon pituus muodostuu aluksi yhdestä ruudusta.
+   * Mato pitenee, kun se syö omenan.
+   * Matoa liikkuu kokoajan.
+   * Matoa voi kääntää vasemmalle, oikealle, ylös tai alas.
 
 
- * Paloja tippuu peliruudun yläreunasta yksitellen satunnaisessa järjestyksessä.
+* Pelissä on omenoita.
+ * Pelaaja saa pisteen, kun syö omenan
+ * Omenoita ilmestyy peliruutuun satunnaiseen paikkaan yksi kerrallaan.
 
 
- * Paloja voi siirtää vasemmalle tai oikealle sekä niitä voi myös pyörittää ympäri.
+ * Kun pelaaja on saanut tietyn määrän pisteitä, mato muuttuu taas yksi ruutuiseksi ja sen nopeus kiihtyy. 
+   * Käyttäjä näkee tasonsa ja pisteidensä määrän peliruudun kohdasta  'Points' ja 'Levels'.
 
 
- * Palojen koskettaessa pelialueen alareunaa tai toista palaa, ei niitä voi enää liikuttaa. 
-   * Kun pala on paikoillaan, yläreunasta tippuu uusi pala. 
- 
-
- * Seuraavaksi tuleva pala näkyy peliruudukossa kohdassa 'Next piece:'.
-   * Seuraavaksi tuleva pala päivittyy aina, kun edellinen pala on paikoillaan.
- 
-
- * Kun pelaaja saa muodostettua vaakasuunnassa kokonaisen rivin paloista, rivu poistuu ja muut palat tippuvat alaspäin.
-   * Kun rivi poistuu, pelaaja saa pisteitä, jotka näkyvät peliruudussa kohdassa 'Points'.
-   
-
- * Kun pelaaja on saanut tietyn määrän pisteitä, peli vaikeutuu eli nopeutuu. 
-   * Käyttäjä näkee tasonsa, peliruudun kohdasta 'Levels'
-
-
- * Peli päättyy, jos palat ylittävät pelialueen yläreunan.
+ * Peli päättyy, jos mato osuu itseensä.
 
 
 ## Jatkokehitysideoita
@@ -75,4 +64,3 @@ Jos jää aikaa jäljelle niin sovellusta voi kehittää seuraavasti:
 * Päävalikkoon lisätään nappi, josta pääsee näkemään top 5 pelaajat ja heidän pisteet.
 * Pelin voi laittaa tauolle.
 * Top 5 pelaajaa näkyy myös pelatessa peliä.
-* 

@@ -28,24 +28,25 @@
 - [ ] Viikko 6
 
 
-# Tetris-sovellus
+# Matopeli-sovellus
 
 -------------------------------
 
-Sovelluksen avulla käyttäjien on mahdollista pelata perinteistä Tetris-peliä.
+Sovelluksen avulla käyttäjien on mahdollista pelata perinteistä Matopeliä.
 Sovellusta voi käyttää yksi pelaaja kerrallaan. 
 
-Pelin tarkoituksena on kerätä pisteitä järjestäen palikoita vaakasuoriksi riveiksi.
-Palikoita tippuu peliruudun yläreunasta satunnaisessa järjestyksessä, ja niitä järjestetään peliruudun alareunaan käyttäjän haluamalla tavalla.
-Pisteiden kertyessä, myös pelin vaikeustaso muuttuu eli palikoiden tippumisnopeus kiihtyy.
-Peli loppuu mikäli palikat ylittävät peliruudun yläreunan. 
+Pelin tarkoituksena on ohjata matoa peliruudukossa ja syödä omenoita. Syömällä omenoita, käyttäjä saa pisteitä.
+Omenoita ilmestyy satunnaisessa järjestyksessä peliruudukkoon yksi kerrallaan.
+Pisteiden kertyessä, myös pelin vaikeustaso muuttuu eli madon etenemisnopeus kiihtyy.
+Peli loppuu mikäli mato törmää itseensä. 
 
-##Huomio Python-versiosta
+## Huomio Python-versiosta
 
 -------------------------------
+
 Sovelluksen toiminta on testattu Python 3.8.10 versiolla. 
 
-##Dokumentatio
+## Dokumentatio
 
 -------------------------------
 
@@ -55,7 +56,7 @@ Sovelluksen toiminta on testattu Python 3.8.10 versiolla.
 * [Testausdokumentti]()
 * [Työaikakirjanpito](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/tyoaikakirjanpito.md)
 
-##Asennus
+## Asennus
 
 -------------------------------
 
@@ -72,17 +73,17 @@ Sovelluksen toiminta on testattu Python 3.8.10 versiolla.
 
 ------------------------
 
-###Ohjelman suorittaminen
+### Ohjelman suorittaminen
 
 Ohjelman pystyy suorittamaan komennolla: `poetry run invoke start`
 
 
-###Testaus
+### Testaus
 
 Ohjelman testit pystyy testaamaan komennolla: `poetry run invoke test`
 
 
-###Testikattavuus
+### Testikattavuus
 
 Ohjelman testikattavuuden pystyy generoimaan komennolla: `poetry run invoke coverage-report`
 

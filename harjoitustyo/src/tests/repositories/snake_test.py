@@ -1,6 +1,6 @@
 from repositories.snake import Snake
 import unittest
-import random
+
 
 class TestSnake(unittest.TestCase):
     def setUp(self):

@@ -2,3 +2,12 @@
 .env.test
 harjoitustyo/.pytest_cache
 harjoitustyo/src/.pytest_cache
+harjoitustyo/src/tests/repositories/__pycache__
+harjoitustyo/src/tests/repositories/.hypothesis
+harjoitustyo/src/tests/repositories/.pytest_cache
+harjoitustyo/src/ui/__pycache__
+laskarit/viikko2/maksukortti/.pytest_cache
+laskarit/viikko2/maksukortti/src/.pytest_cache
+laskarit/viikko2/maksukortti/src/tests/__pycache__
+laskarit/viikko2/maksukortti/src/tests/.hypothesis
+laskarit/viikko2/maksukortti/src/tests/.pytest_cache
