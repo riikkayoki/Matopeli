@@ -1,7 +1,7 @@
 # Ohjelmistotekniikka 2021
 
 -----------------------
-##Harjoitustehtävät
+## Harjoitustehtävät
 
 --------------------------
 
@@ -19,7 +19,7 @@
   [tuntiaikakirjanpito](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/tyoaikakirjanpito.md)
 
 
-- [ ] Viikko 3
+- [x] Viikko 3
 
 - [ ] Viikko 4
 
@@ -69,7 +69,7 @@ Sovelluksen toiminta on testattu Python 3.8.10 versiolla.
 3. Käynnistä sovellus komennolla: `poetry run invoke start`
 
 
-##Komentorivitoiminnot
+## Komentorivitoiminnot
 
 ------------------------
 
@@ -87,7 +87,7 @@ Ohjelman testit pystyy testaamaan komennolla: `poetry run invoke test`
 
 Ohjelman testikattavuuden pystyy generoimaan komennolla: `poetry run invoke coverage-report`
 
-###Pylint
+### Pylint
 
 
 
