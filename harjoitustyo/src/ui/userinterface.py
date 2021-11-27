@@ -9,6 +9,7 @@ class UserInterface:
         pygame.display.set_mode((display_width, display_height))
         self.window = pygame.display.get_surface()
         self.grid_size = 20
+     
 
     def __enter__(self):
         self.window.fill(self.display_color)
@@ -33,6 +34,11 @@ class UserInterface:
             grid_area = pygame.Rect((i[1], i[0]),
                                     (self.grid_size, self.grid_size))
             pygame.draw.rect(self.window, (250, 0, 0), grid_area)
+           
+                
+
+        
+
 
     def draw_food(self, food_position):  # blue
         for i in food_position:
