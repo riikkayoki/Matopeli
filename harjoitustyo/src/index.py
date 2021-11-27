@@ -1,11 +1,14 @@
+import sys
+import pygame
+from repositories.gameboard import GameBoard
+from repositories.apple import Apple
+from repositories.snake import Snake
+from ui.userinterface import UserInterface
 
-from repositories.gameboard import *
-from repositories.apple import *
-from repositories.snake import *
-from ui.userinterface import *
 
 
-class Main:
+
+class Game:
     def __init__(self):
         pygame.init()
         self.clock = pygame.time.Clock()
@@ -16,12 +19,12 @@ class Main:
         self.clock = pygame.time.Clock()
 
     def directions(self):
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                return False
+                sys.exit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
-                    print('left')
                     self.snake.turn_snake('LEFT')
                 if event.key == pygame.K_RIGHT:
                     self.snake.turn_snake('RIGHT')
@@ -42,13 +45,13 @@ class Main:
 
     def start(self):
         while True:
-            if self.directions() == False:
+            if self.directions() is False:
                 break
             self.run()
             self.clock.tick(60)
 
 
 if __name__ == "__main__":
-    g = Main()
-    run = False
-    g.start()
+    GAME = Game()
+    RUN = False
+    GAME.start()

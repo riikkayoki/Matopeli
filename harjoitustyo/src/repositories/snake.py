@@ -1,9 +1,10 @@
 import random
 
-class Snake(object):
+
+class Snake:
     def __init__(self):
         self.position = (random.randint(0, 30 - 1) * 20, random.randint(0, 30 - 1) * 20)
-        self.positions = [(0,0)]
+        self.positions = [(0, 0)]
         self.directions = {'RIGHT': (0, 1), 'LEFT': (0, -1), 'UP': (-1, 0), 'DOWN': (1, 0)}
         self.direction = 'RIGHT'
 

@@ -1,5 +1,5 @@
-from repositories.snake import Snake
 import unittest
+from repositories.snake import Snake
 
 
 class TestSnake(unittest.TestCase):

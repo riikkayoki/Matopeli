@@ -1,7 +1,7 @@
 import random
 
 
-class Apple(object):
+class Apple:
     def __init__(self):
         self.food_positions = [(random.randint(0, 30 - 1) * 20, random.randint(0, 30 - 1) * 20)]
 
