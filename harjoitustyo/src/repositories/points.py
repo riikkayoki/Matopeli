@@ -1,17 +1,16 @@
 
-from apple import Apple
-from snake import Snake
 
 
 class Points:
     def __init__(self):
         self.points = 0
-        self.snake = Snake()
-        self.apple = Apple()
-        
 
-    def get_point(self):
-        if (self.snake.position_x - self.apple.position_x) <= 15 and (self.snake.position_y - self.apple.position_y) <= 15:
+    def get_point(self, snake_position_x, snake_position_y, apple_position_x, apple_position_y):
+
+        if snake_position_x - apple_position_y <= 20 and snake_position_y - apple_position_x <= 20:
             return True
         else:
             return False
+    
+
+  

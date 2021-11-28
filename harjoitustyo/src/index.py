@@ -31,19 +31,21 @@ class Game:
                 if event.key == pygame.K_UP:
                     self.snake.turn_snake('UP')
 
-
     def run(self):
         with self.display:
             self.display.draw_game_board(self.game_board)
             self.snake.move()
+            print(self.snake.body)
             
-            if self.points.get_point():
+            if self.points.get_point(self.snake.position_x, self.snake.position_y, self.apple.position_x, self.apple.position_y):
                 self.apple.new_random_position()
-                self.snake.length += 1
-                self.points.points += 1
                 self.snake.increase_snake_length()
-
+                self.points.points += 1
+           
             if self.snake.border_collision():
+                sys.exit()
+            
+            if self.snake.snake_collision(): # ei toimi viel
                 sys.exit()
          
             self.display.draw_food(self.apple)

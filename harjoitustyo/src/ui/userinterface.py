@@ -27,11 +27,11 @@ class UserInterface:
            
              
     def draw_snake(self, snake):  # red
-        for _ in snake.positions:
-            pygame.draw.rect(self.window, (250, 100, 200), [snake.position_x, snake.position_y, self.grid_size, self.grid_size])
+        for postion in snake.body:
+            pygame.draw.rect(self.window, (250, 100, 200), pygame.Rect(postion[1], postion[0], self.grid_size, self.grid_size))
 
     def draw_food(self, apple):  # green
-        for _ in apple.positions:
+        for position in apple.positions:
             pygame.draw.rect(self.window, (10, 250, 100), [apple.position_x, apple.position_y, self.grid_size, self.grid_size])
 
     def draw_points(self):
