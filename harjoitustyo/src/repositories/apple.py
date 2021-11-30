@@ -2,14 +2,14 @@ import random
 
 
 class Apple:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y 
-        self.position_x = random.randint(60, self.x) 
-        self.position_y = random.randint(60, self.y)
-        self.positions = [[self.position_x, self.position_y]]
-        
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+        self.position_apple_width = random.randint(60, self.width)
+        self.position_apple_height = random.randint(60, self.height)
+        self.positions = [
+            [self.position_apple_width, self.position_apple_height]]
+
     def new_random_position(self):
-        self.position_x = random.randint(60, self.x) 
-        self.position_y = random.randint(60, self.y)
-        self.positions = [self.position_x, self.position_y]
+        self.positions = [self.position_apple_width,
+                          self.position_apple_height]

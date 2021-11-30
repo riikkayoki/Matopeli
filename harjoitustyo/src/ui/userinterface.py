@@ -9,8 +9,6 @@ class UserInterface:
         self.grid_size = 30
         pygame.display.set_mode((self.display_width, display_height))
         self.window = pygame.display.get_surface()
-       
-    
 
     def __enter__(self):
         self.window.fill(self.display_color)
@@ -22,17 +20,20 @@ class UserInterface:
         for row in range(2, game_board.board_width):
             for column in range(2, game_board.board_height):
                 grid_area = pygame.Rect((row * self.grid_size, column * self.grid_size),
-                                            (self.grid_size, self.grid_size))
+                                        (self.grid_size, self.grid_size))
                 pygame.draw.rect(self.window, (250, 250, 250), grid_area)
-           
-             
+
     def draw_snake(self, snake):  # red
-        for postion in snake.body:
-            pygame.draw.rect(self.window, (250, 100, 200), pygame.Rect(postion[1], postion[0], self.grid_size, self.grid_size))
+        for position in snake.body:
+            pygame.draw.rect(self.window, (250, 100, 200),
+                             pygame.Rect(position[1], position[0],
+                                         self.grid_size, self.grid_size))
 
     def draw_food(self, apple):  # green
-        for position in apple.positions:
-            pygame.draw.rect(self.window, (10, 250, 100), [apple.position_x, apple.position_y, self.grid_size, self.grid_size])
+        for _ in apple.positions:
+            pygame.draw.rect(self.window, (10, 250, 100),
+                             [apple.position_apple_width, apple.position_apple_height,
+                              self.grid_size, self.grid_size])
 
     def draw_points(self):
         font = pygame.font.SysFont('Times New Roman', 30)

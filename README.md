@@ -1,33 +1,6 @@
 # Ohjelmistotekniikka 2021
 
 -----------------------
-## Harjoitustehtävät
-
---------------------------
-
-- [x] Viikko 1 
-
-  [gitlog.txt](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt) & 
-  [komentorivi.txt](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
-
-
-- [x] Viikko 2
-
-  [maksukortti](https://github.com/riikkayoki/ot-harjoitustyo/tree/master/laskarit/viikko2/maksukortti),
-  [unicafe](https://github.com/riikkayoki/ot-harjoitustyo/tree/master/laskarit/viikko2/unicafe),
-  [vaatimusmäärittely](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/vaativuusmaarittely.md) &
-  [tuntiaikakirjanpito](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/tyoaikakirjanpito.md)
-
-
-- [x] Viikko 3
-
-- [ ] Viikko 4
-
-- [ ] Viikko 5 
-
-- [ ] Viikko 6
-
-
 # Matopeli-sovellus
 
 -------------------------------
@@ -88,6 +61,10 @@ Ohjelman testit pystyy testaamaan komennolla: `poetry run invoke test`
 Ohjelman testikattavuuden pystyy generoimaan komennolla: `poetry run invoke coverage-report`
 
 ### Pylint
+
+Tiedoston .pylintrc määrittelemät tarkistukset voi suorittaa komennolla:
+
+`poetry run invoke lint`
 
 
 

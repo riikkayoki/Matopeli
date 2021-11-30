@@ -11,3 +11,9 @@ laskarit/viikko2/maksukortti/src/.pytest_cache
 laskarit/viikko2/maksukortti/src/tests/__pycache__
 laskarit/viikko2/maksukortti/src/tests/.hypothesis
 laskarit/viikko2/maksukortti/src/tests/.pytest_cache
+htmlcov
+__pycache__
+.coverage
+.pylintrc
+.pytest_cache
+.idea

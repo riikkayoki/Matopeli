@@ -2,41 +2,41 @@ import random
 
 
 class Snake:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-        self.position_x = random.randint(60, self.x)
-        self.position_y = random.randint(60, self.y)
-        self.body = [[self.position_x, self.position_y]]
-        self.directions = {'RIGHT': (0, 1), 'LEFT': (0, -1), 'UP': (-1, 0), 'DOWN': (1, 0)}
-        self.direction = random.choice(['RIGHT', 'DOWN'])
-        
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+        self.position_snake_width = random.randint(60, self.width)
+        self.position_snake_height = random.randint(60, self.height)
+        self.body = [[self.position_snake_width, self.position_snake_height]]
+        self.directions = {'RIGHT': (0, 1), 'LEFT': (0, -1),
+                           'UP': (-1, 0), 'DOWN': (1, 0)}
+        self.direction = random.choice(['RIGHT', 'LEFT', 'UP', 'DOWN'])
+
     def turn_snake(self, direction):
         self.direction = direction
 
     def move(self):
-        to_move = self.directions[self.direction] 
-        self.position_x = self.position_x + to_move[0]
-        self.position_y = self.position_y + to_move[1] 
-        self.body.insert(0, [self.position_x + to_move[0], self.position_y + to_move[1]])
+        to_move = self.directions[self.direction]
+        self.position_snake_width = self.position_snake_width + to_move[0]
+        self.position_snake_height = self.position_snake_height + to_move[1]
+        self.body.insert(0, [self.position_snake_width + to_move[0],
+                             self.position_snake_height + to_move[1]])
         self.body.pop()
-      
-    def increase_snake_length(self):
-        self.body.insert(0, [self.position_x, self.position_y])
 
-    def border_collision(self): 
-        if self.position_x == 630 or self.position_x == 60:
+    def increase_snake_length(self):
+        for _ in range(30):
+            self.body.insert(
+                0, [self.position_snake_width, self.position_snake_height])
+
+    def border_collision(self):
+        if self.position_snake_width == 630 or self.position_snake_width == 60:
             return True
-        if self.position_y == 630 or self.position_y == 60:
+        if self.position_snake_height == 630 or self.position_snake_height == 60:
             return True
-        else:
-            return False
+        return False
 
     def snake_collision(self):
-        if (self.position_x in self.body[2:] or self.position_y in self.body[2:]):
+        if (self.position_snake_width in self.body[2:] or
+                self.position_snake_width in self.body[2:]):
             return True
-        else:
-            return False
-        
-        
-
+        return False

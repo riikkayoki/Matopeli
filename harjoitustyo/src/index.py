@@ -6,6 +6,7 @@ from repositories.apple import Apple
 from ui.userinterface import UserInterface
 from repositories.points import Points
 
+
 class Game:
     def __init__(self):
         pygame.init()
@@ -36,18 +37,21 @@ class Game:
             self.display.draw_game_board(self.game_board)
             self.snake.move()
             print(self.snake.body)
-            
-            if self.points.get_point(self.snake.position_x, self.snake.position_y, self.apple.position_x, self.apple.position_y):
+
+            if self.points.get_point(self.snake.position_snake_width,
+                                     self.snake.position_snake_height,
+                                     self.apple.position_apple_width,
+                                     self.apple.position_apple_height):
                 self.apple.new_random_position()
                 self.snake.increase_snake_length()
                 self.points.points += 1
-           
+
             if self.snake.border_collision():
                 sys.exit()
-            
-            if self.snake.snake_collision(): # ei toimi viel
+
+            if self.snake.snake_collision():  # ei toimi viel
                 sys.exit()
-         
+
             self.display.draw_food(self.apple)
             self.display.draw_snake(self.snake)
             self.display.draw_points()
