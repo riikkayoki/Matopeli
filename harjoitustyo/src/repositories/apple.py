@@ -11,5 +11,7 @@ class Apple:
             [self.position_apple_width, self.position_apple_height]]
 
     def new_random_position(self):
+        self.position_apple_width = random.randint(60, self.width)
+        self.position_apple_height = random.randint(60, self.height)
         self.positions = [self.position_apple_width,
                           self.position_apple_height]
