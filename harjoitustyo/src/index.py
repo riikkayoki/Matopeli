@@ -43,21 +43,21 @@ class Game:
             self.points.points += 1
 
     def new_level(self):
-        if self.points.points <= 2:
-            self.level.level = 'EASY'
-            self.level.easy_level()
+        if self.points.points <= 5:
+            self.level.level(100)
+            self.level.level_name = 'EASY'
 
-        if self.points.points >= 3 and self.points.points < 5:
-            self.level.level = 'MEDIUM'
-            self.level.medium_level()
+        if 6 <= self.points.points < 10:
+            self.level.level(200)
+            self.level.level_name = 'MEDIUM'
 
-        if self.points.points >= 5 and self.points.points < 6:
-            self.level.hard_level()
-            self.level.level = 'HARD'
+        if 10 <= self.points.points < 30:
+            self.level.level(300)
+            self.level.level_name = 'HARD'
 
-        if self.points.points >= 6:
-            self.level.level = 'IMPOSSIBLE'
-            self.level.impossible_level()
+        if self.points.points >= 30:
+            self.level.level(400)
+            self.level.level_name = 'IMPOSSIBLE'
 
     def game_over(self):
         if self.snake.border_collision():
@@ -72,7 +72,7 @@ class Game:
             self.display.draw_food(self.apple)
             self.display.draw_snake(self.snake)
             self.display.draw_points(self.points.points)
-            self.display.draw_levels(self.level.level)
+            self.display.draw_levels(self.level.level_name)
 
     def start(self):
         while True:
