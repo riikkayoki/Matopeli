@@ -4,6 +4,9 @@
 # Matopeli-sovellus
 
 -------------------------------
+[Paina tästä päästäksesi releaseen](https://github.com/riikkayoki/ot-harjoitustyo/releases/tag/viikko5)
+
+-------------------------------
 
 Sovelluksen avulla käyttäjien on mahdollista pelata perinteistä Matopeliä.
 Sovellusta voi käyttää yksi pelaaja kerrallaan. 
