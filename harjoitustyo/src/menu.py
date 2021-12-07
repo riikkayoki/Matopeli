@@ -10,11 +10,13 @@ class Menu:
         self.mouse = pygame.mouse.get_pos()
 
     def start(self):
-        if self.start_rect.collidepoint(self.mouse):
-            if pygame.mouse.get_pressed():
-                return True
-            else:
-                return False
+        for event in pygame.event.get():
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if self.start_rect.collidepoint(self.mouse):
+                    if pygame.mouse.get_pressed():
+                        return True
+                    else:
+                        return False
 
     def instructions(self):
         if self.instruction_rect.collidepoint(self.mouse):

@@ -8,6 +8,7 @@ from points import Points
 from levels import Levels
 from menu import Menu
 
+
 class Game:
     def __init__(self):
         pygame.init()
@@ -34,6 +35,7 @@ class Game:
                     self.snake.turn_snake('DOWN')
                 if event.key == pygame.K_UP:
                     self.snake.turn_snake('UP')
+
 
     def new_point(self):
         if self.points.get_point(self.snake.position_snake_width,
@@ -97,6 +99,7 @@ class Game:
                 pass
             else:
                 self.main_menu()
+
 
 if __name__ == "__main__":
     GAME = Game()
