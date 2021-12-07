@@ -6,6 +6,7 @@ from entities.apple import Apple
 from ui.userinterface import UserInterface
 from points import Points
 from levels import Levels
+from menu import Menu
 
 class Game:
     def __init__(self):
@@ -18,6 +19,7 @@ class Game:
         self.clock = pygame.time.Clock()
         self.points = Points()
         self.level = Levels()
+        self.menu = Menu()
 
     def directions(self):
         for event in pygame.event.get():
@@ -61,7 +63,11 @@ class Game:
 
     def game_over(self):
         if self.snake.border_collision():
-            sys.exit()
+            pygame.time.delay(100)
+            self.display.draw_game_over()
+            clock = pygame.time.Clock()
+            clock.tick(1000)
+            quit()
 
     def run(self):
         with self.display:
@@ -74,13 +80,23 @@ class Game:
             self.display.draw_points(self.points.points)
             self.display.draw_levels(self.level.level_name)
 
+    def main_menu(self):
+        with self.display:
+            self.display.draw_menu_text()
+            self.display.draw_start_button()
+            self.display.draw_instruction_button()
+
     def start(self):
         while True:
             if self.directions() is False:
                 break
-            self.run()
-            self.new_level()
-
+            if self.menu.start():
+                self.run()
+                self.new_level()
+            if self.menu.instructions():
+                pass
+            else:
+                self.main_menu()
 
 if __name__ == "__main__":
     GAME = Game()

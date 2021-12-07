@@ -21,15 +21,14 @@ class Snake:
         to_move = self.directions[self.direction]
         self.position_snake_width = self.position_snake_width + to_move[0]
         self.position_snake_height = self.position_snake_height + to_move[1]
-        self.body.insert(0, [self.position_snake_width + to_move[0],
-                             self.position_snake_height + to_move[1]])
-        self.body.pop()
+        self.body.append([self.position_snake_width + to_move[0],
+                          self.position_snake_height + to_move[1]])
+        self.body.pop(0)
 
     def increase_snake_length(self):
         self.length += 1
         for _ in range(30):
-            self.body.insert(
-                0, [self.position_snake_width, self.position_snake_height])
+            self.body.append([self.position_snake_width, self.position_snake_height])
 
     def border_collision(self):
         if self.position_snake_width == 630 or self.position_snake_width == 60:
@@ -39,6 +38,7 @@ class Snake:
         return False
 
     def snake_collision(self):
-        if self.positions[0] and self.positions[1] in self.body[1:]:
-            return True
-        return False
+        for i in self.body:
+            if i[0:] in i[32:]:
+                return True
+            return False
