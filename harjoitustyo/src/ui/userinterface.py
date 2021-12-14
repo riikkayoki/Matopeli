@@ -8,7 +8,6 @@ class UserInterface:
         self.grid_size = 30
         pygame.display.set_mode((self.display_width, display_height))
         self.window = pygame.display.get_surface()
-        self.pressed = False
 
     def __enter__(self):
         self.window.fill(self.display_color)
@@ -43,11 +42,6 @@ class UserInterface:
         text = font.render(f'Points: {points}', False, (200, 200, 200))
         self.window.blit(text, (700, 60))
 
-    def draw_levels(self, level):
-        font = pygame.font.SysFont('Times New Roman', 30)
-        text = font.render(f'Level: {level}', False, (200, 200, 200))
-        self.window.blit(text, (700, 165))
-
     def draw_game_over(self):
         font = pygame.font.SysFont('Times New Roman', 30)
         text = font.render(f'Game over!', False, (200, 200, 200))
@@ -64,13 +58,29 @@ class UserInterface:
         text = font.render(f'START GAME', False, (0, 0, 0))
         self.window.blit(text, ((self.display_width // 3) + 25, 250))
 
-
     def draw_instruction_button(self):
         pygame.draw.rect(self.window, (200, 200, 200), pygame.Rect(self.display_width // 3, 350, 300, 50))
         font = pygame.font.SysFont('Times New Roman', 40)
         text = font.render(f'INSTRUCTIONS', False, (0, 0, 0))
         self.window.blit(text, (self.display_width // 3, 350))
 
+    def draw_back_button(self):
+        pygame.draw.rect(self.window, (200, 200, 200), pygame.Rect(900, 600, 80, 30))
+        font = pygame.font.SysFont('Times New Roman', 20)
+        text = font.render(f'Go Back', False, (0, 0, 0))
+        self.window.blit(text, (900, 600))
+
+    def draw_instructions(self):
+        font = pygame.font.SysFont('Times New Roman', 40)
+        text = font.render(f'Eat the apples, but do not hit the walls or your own tail!', False, (200, 200, 200))
+        self.window.blit(text, (60, 300))
+
+    def draw_form(self):
+        self.window.fill((200,200,200))
+        pygame.draw.rect(self.window, (0, 0, 0), pygame.Rect(900, 600, 80, 30))
+        font = pygame.font.SysFont('Times New Roman', 20)
+        text = font.render(f'Enter', False, (0, 0, 0))
+        self.window.blit(text, (900, 600))
 
 
 

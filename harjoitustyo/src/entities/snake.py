@@ -1,4 +1,5 @@
 import random
+import pygame
 
 
 class Snake:
@@ -7,15 +8,16 @@ class Snake:
         self.height = height
         self.position_snake_width = random.randint(60, self.width)
         self.position_snake_height = random.randint(60, self.height)
-        self.positions = [self.position_snake_width, self.position_snake_height]
         self.body = [[self.position_snake_width, self.position_snake_height]]
         self.directions = {'RIGHT': (0, 1), 'LEFT': (0, -1),
                            'UP': (-1, 0), 'DOWN': (1, 0)}
         self.direction = random.choice(['RIGHT', 'LEFT', 'UP', 'DOWN'])
         self.length = 1
+        self.clock = pygame.time.Clock()
 
     def turn_snake(self, direction):
         self.direction = direction
+        pass
 
     def move(self):
         to_move = self.directions[self.direction]
@@ -24,6 +26,9 @@ class Snake:
         self.body.append([self.position_snake_width + to_move[0],
                           self.position_snake_height + to_move[1]])
         self.body.pop(0)
+
+    def snake_speed(self, speed):
+        self.clock.tick(speed)
 
     def increase_snake_length(self):
         self.length += 1
@@ -38,7 +43,6 @@ class Snake:
         return False
 
     def snake_collision(self):
-        for i in self.body:
-            if i[0:] in i[32:]:
-                return True
-            return False
+        if self.body[0] in self.body[60:]:
+            return True
+        return False
