@@ -48,7 +48,9 @@ class Snake:
             self.body.append([self.position_snake_width, self.position_snake_height])
 
     def border_collision(self):
-        """Palauttaa arvon True, jos mato osuu seinään"""
+        """Tarkistaa osuuko pelilaudan reunaan.
+
+        Returns: True, jos mato osuu pelilaudan reunaan, muussa tapauksessa False"""
         if self.position_snake_width == 630 or self.position_snake_width == 60:
             return True
         if self.position_snake_height == 630 or self.position_snake_height == 60:
@@ -56,7 +58,9 @@ class Snake:
         return False
 
     def snake_collision(self):
-        """Palauttaa arvon True, jos mato osuu itseensä"""
+        """Tarkistaa osuuko mato itseensä
+
+        Returns: True, jos mato osuu itseensä, muussa tapauksessa False"""
         if self.body[0] in self.body[60:]:
             return True
         return False

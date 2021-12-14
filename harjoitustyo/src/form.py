@@ -10,10 +10,14 @@ class Form:
         self.enter_rect = pygame.Rect(900, 600, 80, 30)
 
     def show_form(self):
+        """Päivittää graafista käyttöliityymää"""
         with self.display:
             self.display.draw_form()
 
     def enter(self, mouse):
+        """Tallentaa pelaajan nimimerkin.
+
+            Returns: True, jos painetaan 'Enter'-nappia, muussa tapauksessa False"""
         if self.enter_rect.collidepoint(mouse):
             return True
         return False
