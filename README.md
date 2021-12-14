@@ -26,10 +26,10 @@ Sovelluksen toiminta on testattu Python 3.8.10 versiolla.
 
 -------------------------------
 
-* [Käyttöohje]()
+* [Käyttöohje](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/kayttoohje.md)
 * [Vaatimusmäärittely](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/vaativuusmaarittely.md)
 * [Arkkitehtuurikuvaus](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/arkkitehtuuri.md)
-* [Testausdokumentti]()
+* [Testausdokumentti](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/testaus.md)
 * [Työaikakirjanpito](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/tyoaikakirjanpito.md)
 
 ## Asennus
