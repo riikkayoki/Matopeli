@@ -17,3 +17,9 @@ __pycache__
 .pylintrc
 .pytest_cache
 .idea
+entities/__init__.pyc
+entities/snake.pyc
+entities/apple.pyc
+tests/__init__.pyc
+tests/entities/__init__.pyc
+points.pyc
