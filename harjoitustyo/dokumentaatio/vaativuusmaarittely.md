@@ -37,12 +37,12 @@ Päädymme tämän valikon jälkeen taas päävalikkoon.
 ## Perusversion tarjoama toiminnallisuus
 ___________________________________
 
-* Päävalikko.
-  * Start -nappi
-  * Käyttöohjeet -nappi
+* Päävalikko. **TEHTY**
+  * Start -nappi **TEHTY**
+  * Käyttöohjeet -nappi **TEHTY**
 
 
-* Pelialue 20x20.
+* Pelialue 20x20. **TEHTY**
   * Mato voi liikkua vain pelialueella.  **TEHTY**
   * Jos mato osuu pelialueen reunaan, peli loppuu **TEHTY**
 
@@ -60,16 +60,11 @@ ___________________________________
 
 
 * Pelaaja kerää pisteitä syömällä omenoita.
-  * Pelaaja saa pisteen, kun syö omenan.
-  * Kun pelaaja saa pisteen, piste tulee näkyviin kohtaan 'Points'.
+  * Pelaaja saa pisteen, kun syö omenan. **TEHTY**
+  * Kun pelaaja saa pisteen, piste tulee näkyviin kohtaan 'Points'. **TEHTY**
   
 
-* Pelissä on eri tasoja:
-  * Kun pelaaja on saanut tietyn määrän pisteitä, mato muuttuu taas yksi ruutuiseksi ja sen nopeus kiihtyy. 
-  * Käyttäjä näkee tasonsa ja pisteidensä määrän peliruudun kohdasta 'Levels'. 
-   
-
-* Peli päättyy, jos mato osuu itseensä.
+* Peli päättyy, jos mato osuu itseensä. **TEHTY**
   * Jos pelaaja oli top5 pelaanjan joukossa pistemäärältään, hän lisää nimensä kenttään ja nimi näkyy leaderboardilla.
   * Jos pelaaja ei ollut top5 pelaajan joukossa, hän näkee sijoituksensa pelissä.
   * Näkymä ohjautuu taas päävalikkoon.
