@@ -4,7 +4,7 @@
 # Matopeli-sovellus
 
 -------------------------------
-[Paina tästä päästäksesi releaseen](https://github.com/riikkayoki/ot-harjoitustyo/releases/tag/viikko5)
+[Paina tästä päästäksesi viimeisempään releaseen](https://github.com/riikkayoki/ot-harjoitustyo/releases)
 
 -------------------------------
 
