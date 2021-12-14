@@ -16,6 +16,8 @@
 | 27.11.2021 | 6 h    | Madon ja omenan koodaamista. Sain koodattua nyt madon niin, että se pitenee joka kerta, kun se syö omenan. Omena myös muuttaa paikkaansa pelilaudalla aina, kun se syödään. Pylint myös käytössä. | 
 | 30.11.2021 | 1,5 h  | Koodin hienosäätöä (pylint). Matopelin koodausta.                                                                                                                                                 | 
 | 7.12.2021  | 8,0 h  | Main Menun koodamista. Debuggaus. Koodin hienosäätöä (pylint). Testausta.                                                                                                                         |
+| 9.12.2021  | 5 h    | Parantelin harjoitustyön rakennetta ja Main Menun tekemistä.                                                                                                                                      |
+| 14.12.2021 | 8,0 h  | Main Menun koodamista ja koodasin ehdot miten peli loppuu.                                                                                                                                        |
 
 
-Tuunnit yhteensä = 56 h
+Tuunnit yhteensä = 69 h
