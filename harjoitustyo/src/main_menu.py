@@ -2,7 +2,9 @@ import pygame
 from ui.userinterface import UserInterface
 
 class MainMenu:
+    """Luokka, jonka avulla luodaan pelille päävalikko"""
     def __init__(self):
+        """Luokan konstruktori"""
         self.display = UserInterface(1000, 720, (0, 0, 0))
         self.start_rect = pygame.Rect((self.display.display_width // 3) + 25, 250, 250, 50)
         self.instruction_rect = pygame.Rect(self.display.display_width // 3, 350, 300, 50)

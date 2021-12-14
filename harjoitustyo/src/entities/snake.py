@@ -3,7 +3,16 @@ import pygame
 
 
 class Snake:
+    """Luokka joka kuvaa matoa
+
+    Attributes:
+        self.width = madon yhden ruudun leveys
+        self.height = madon yhden ruudun pituus
+        self.direction = annetaan madolle satunnainen suunta
+        self.length = madon pituus
+        """
     def __init__(self, width, height):
+        """Luokan konstruktori"""
         self.width = width
         self.height = height
         self.position_snake_width = random.randint(60, self.width)
@@ -16,10 +25,11 @@ class Snake:
         self.clock = pygame.time.Clock()
 
     def turn_snake(self, direction):
+        """Auttaa matoa kääntymään"""
         self.direction = direction
-        pass
 
     def move(self):
+        """Auttaa matoa liikkumaan"""
         to_move = self.directions[self.direction]
         self.position_snake_width = self.position_snake_width + to_move[0]
         self.position_snake_height = self.position_snake_height + to_move[1]
@@ -28,14 +38,17 @@ class Snake:
         self.body.pop(0)
 
     def snake_speed(self, speed):
+        """Antaa madolle nopeuden"""
         self.clock.tick(speed)
 
     def increase_snake_length(self):
+        """Lisää madon pituutta"""
         self.length += 1
         for _ in range(30):
             self.body.append([self.position_snake_width, self.position_snake_height])
 
     def border_collision(self):
+        """Palauttaa arvon True, jos mato osuu seinään"""
         if self.position_snake_width == 630 or self.position_snake_width == 60:
             return True
         if self.position_snake_height == 630 or self.position_snake_height == 60:
@@ -43,6 +56,7 @@ class Snake:
         return False
 
     def snake_collision(self):
+        """Palauttaa arvon True, jos mato osuu itseensä"""
         if self.body[0] in self.body[60:]:
             return True
         return False

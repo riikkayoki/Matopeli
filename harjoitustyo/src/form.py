@@ -3,7 +3,9 @@ import pygame
 
 
 class Form:
+    """Luokka, jonka avulla kirjataan pelaajan nimimerkki talteen leaderbordia varten"""
     def __init__(self):
+        """Luokan konstruktori"""
         self.display = UserInterface(1000, 720, (0, 0, 0))
         self.enter_rect = pygame.Rect(900, 600, 80, 30)
 
