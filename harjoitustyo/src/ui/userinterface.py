@@ -76,12 +76,9 @@ class UserInterface:
         self.window.blit(text, (60, 300))
 
     def draw_form(self):
-        self.window.fill((200,200,200))
-        pygame.draw.rect(self.window, (0, 0, 0), pygame.Rect(900, 600, 80, 30))
-        font = pygame.font.SysFont('Times New Roman', 20)
-        text = font.render(f'Enter', False, (0, 0, 0))
-        self.window.blit(text, (900, 600))
-
+        font = pygame.font.SysFont('Times New Roman', 40)
+        text = font.render('GAME OVER!', False, (200, 200, 200))
+        self.window.blit(text, (350, 300))
 
 
 

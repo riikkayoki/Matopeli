@@ -87,6 +87,8 @@ class Game:
                 self.run()
                 self.snake.snake_speed(200)
                 if self.stop_game:
+                    self.form.show_form()
+                    pygame.time.delay(2000)
                     self.start_game = False
             elif self.open_instructions:
                 self.instructions.show_instructions()
@@ -94,6 +96,9 @@ class Game:
                     self.open_instructions = False
             else:
                 self.menu.main_menu()
+            self.go_back = False
+            self.stop_game = False
+
 
 if __name__ == "__main__":
     GAME = Game()
