@@ -15,7 +15,7 @@ class Form:
         """Päivittää graafista käyttöliityymää"""
 
         with self.display:
-            self.display.draw_form()
+            self.display.draw_form_texts()
             self.display.draw_input_box()
             self.display.draw_enter_button()
 

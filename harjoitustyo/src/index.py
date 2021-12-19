@@ -9,8 +9,8 @@ from services.main_menu import MainMenu
 from form import Form
 from services.instructions_menu import InstructionsMenu
 from services.leaderboard_menu import LeaderBoardMenu
-
-
+ 
+ 
 class Game:
     def __init__(self):
         pygame.init()
@@ -25,40 +25,18 @@ class Game:
         self.form = Form()
         self.instructions = InstructionsMenu()
         self.leaderboard = LeaderBoardMenu()
-        self.start_game = False
-        self.go_back = False
-        self.stop_game = False
-        self.text = ''
-        self.enter = False
-        self.writing = False
-        self.pause = False
-        self.open_instructions = False
-        self.open_leaderboard = False
-    
+        self.start_game, self.stop_game, self.pause = False, False, False
+        self.open_instructions, self.open_leaderboard= False, False
+        self.go_back, self.enter = False, False
+        self.text, self.writing = '', False
+        
+
     def events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
 
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
-                    self.snake.turn_snake('LEFT')
-                if event.key == pygame.K_RIGHT:
-                    self.snake.turn_snake('RIGHT')
-                if event.key == pygame.K_DOWN:
-                    self.snake.turn_snake('DOWN')
-                if event.key == pygame.K_UP:
-                    self.snake.turn_snake('UP')
-
-                if self.writing:
-                    if event.key == pygame.K_RETURN:
-                        print(text)
-                        text = ''
-                    elif event.key == pygame.K_BACKSPACE:
-                        self.text = self.text[:-1]
-                    else:
-                        self.text += event.unicode
-
+ 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if pygame.mouse.get_pressed():
                     if self.menu.start(pygame.mouse.get_pos()):
@@ -73,9 +51,27 @@ class Game:
                         self.writing = True
                     if self.form.press_enter(pygame.mouse.get_pos()):
                         self.enter = True
-
-
             
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    self.snake.turn_snake('LEFT')
+                if event.key == pygame.K_RIGHT:
+                    self.snake.turn_snake('RIGHT')
+                if event.key == pygame.K_DOWN:
+                    self.snake.turn_snake('DOWN')
+                if event.key == pygame.K_UP:
+                    self.snake.turn_snake('UP')
+ 
+                if self.writing:
+                    if event.key == pygame.K_RETURN:
+                        print(text)
+                        text = ''
+                    elif event.key == pygame.K_BACKSPACE:
+                        self.text = self.text[:-1]
+                    else:
+                        self.text += event.unicode
+ 
+
     def update_points(self):
         if self.points.get_point(self.snake.position_snake_width,
                                  self.snake.position_snake_height,
@@ -84,22 +80,24 @@ class Game:
             self.apple.new_random_position()
             self.snake.increase_snake_length()
             self.points.points += 1
-
+ 
     def game_over(self):
         if self.snake.border_collision():
-            self.stop_game = True
             pygame.time.delay(500)
+            self.stop_game = True
+            self.start_game = False
             self.pause = True
         if self.snake.snake_collision():
-            self.stop_game = True
             pygame.time.delay(500)
+            self.stop_game = True
+            self.start_game = False
             self.pause = True
-    
+ 
     def reset_game(self):
         self.snake.reset_snake()
         self.apple.reset_apple()
         self.points.reset_points()
-
+ 
     def run(self):
         with self.display:
             self.snake.move()
@@ -109,41 +107,42 @@ class Game:
             self.display.draw_food(self.apple)
             self.display.draw_snake(self.snake)
             self.display.draw_points(self.points.points)
-         
+ 
     def start(self):
         while True:
             if self.events() is False:
                 break
-
+ 
             elif self.start_game:
                 self.run()
                 self.snake.snake_speed(200)
-                if self.stop_game:
-                    while self.pause:
-                        self.form.form()
-                        if self.enter:
-                            self.pause = False
-                            self.start_game = False
-                            self.reset_game()
-
+ 
+            elif self.stop_game:
+                self.form.form()
+                if self.enter:
+                    self.pause = False
+                    self.start_game = False
+                    self.reset_game()
+                    self.stop_game = False
+                    self.open_leaderboard = False
+ 
             elif self.open_instructions:
                 self.instructions.show_instructions()
                 if self.go_back:
                     self.open_instructions = False
-            
+ 
             elif self.open_leaderboard:
                 self.leaderboard.show_leaderboard()
                 if self.go_back:
                     self.open_leaderboard = False
-
+ 
             else:
                 self.menu.main_menu()
             self.go_back = False
-            self.stop_game = False
             self.enter = False
             self.writing = False
-
-
+ 
+ 
 if __name__ == "__main__":
     GAME = Game()
     GAME.start()
