@@ -19,7 +19,6 @@ class Game:
         self.game_board = GameBoard(22, 22, pygame.Rect(0, 0, 600, 600))
         self.snake = Snake(570, 570)
         self.apple = Apple(570, 570)
-        self.clock = pygame.time.Clock()
         self.points = Points()
         self.menu = MainMenu()
         self.form = Form()
@@ -35,17 +34,16 @@ class Game:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
-
  
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if pygame.mouse.get_pressed():
-                    if self.menu.start(pygame.mouse.get_pos()):
+                    if self.menu.to_start(pygame.mouse.get_pos()):
                         self.start_game = True
-                    if self.menu.instructions(pygame.mouse.get_pos()):
+                    if self.menu.to_instructions(pygame.mouse.get_pos()):
                         self.open_instructions = True
                     if self.menu.to_leaderboard(pygame.mouse.get_pos()):
                         self.open_leaderboard = True
-                    if self.instructions.back(pygame.mouse.get_pos()):
+                    if self.menu.back(pygame.mouse.get_pos()):
                         self.go_back = True
                     if self.form.write(pygame.mouse.get_pos()):
                         self.writing = True
@@ -104,7 +102,7 @@ class Game:
             self.update_points()
             self.game_over()
             self.display.draw_game_board(self.game_board)
-            self.display.draw_food(self.apple)
+            self.display.draw_apple(self.apple)
             self.display.draw_snake(self.snake)
             self.display.draw_points(self.points.points)
  

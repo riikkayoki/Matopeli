@@ -15,7 +15,7 @@ class UserInterface:
         self.black = (0, 0, 0)
         self.white = (250, 250, 250)
         self.red = (200, 0, 0)
-        
+
     def __enter__(self):
         """Päivittää pelin taustan"""
         self.window.fill(self.display_color)
@@ -45,7 +45,7 @@ class UserInterface:
             self.rect(self.black, (position[1], position[0],
                                          self.grid_size, self.grid_size))
 
-    def draw_food(self, apple):
+    def draw_apple(self, apple):
         """Piirtää omenan"""
         for _ in apple.positions:
             self.rect(self.red, (apple.position_apple_width, apple.position_apple_height,

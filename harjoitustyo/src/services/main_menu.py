@@ -9,6 +9,7 @@ class MainMenu:
         self.start_rect = pygame.Rect((self.display.display_width // 4) + 20, 200, 250, 50)
         self.instruction_rect = pygame.Rect(self.display.display_width // 4 - 2, 400, 290, 50)
         self.leaderboard_rect = pygame.Rect(self.display.display_width // 4 - 5, 300, 300, 50)
+        self.back_rect = pygame.Rect(440, 560, 149, 26)
 
     def main_menu(self):
         """Päivittää päävalikon graafista käyttöliityymää"""
@@ -18,7 +19,7 @@ class MainMenu:
             self.display.draw_instruction_button()
             self.display.draw_leaderboard_button()
 
-    def start(self, mouse):
+    def to_start(self, mouse):
         """Aloittaa pelin
 
         Returns: True, jos painetaan 'Start'-nappia, muussa tapauksessa False"""
@@ -26,7 +27,7 @@ class MainMenu:
             return True
         return False
 
-    def instructions(self, mouse):
+    def to_instructions(self, mouse):
         """Avaa käyttöohjeikkunan
 
         Returns: True, jos painetaan 'Instructions'-nappia, muussa tapauksessa False"""
@@ -39,7 +40,14 @@ class MainMenu:
             return True
         return False
 
+    def back(self, mouse):
+        """Vie pelaajan takaisin päävalikkoon instructionista ja leaderboard menusta.
 
+        Returns: True, jos painetaan 'Back'-nappia, muussa tapauksessa False"""
+        
+        if self.back_rect.collidepoint(mouse):
+            return True
+        return False
 
 
 
