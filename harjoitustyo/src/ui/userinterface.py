@@ -15,6 +15,7 @@ class UserInterface:
         self.black = (0, 0, 0)
         self.white = (250, 250, 250)
         self.red = (200, 0, 0)
+        
     def __enter__(self):
         """Päivittää pelin taustan"""
         self.window.fill(self.display_color)
