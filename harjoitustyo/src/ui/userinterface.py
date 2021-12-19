@@ -22,74 +22,103 @@ class UserInterface:
 
     def draw_game_board(self, game_board):
         """Piirtää pelilaudan"""
-        for row in range(2, game_board.board_width):
-            for column in range(2, game_board.board_height):
+        for row in range(game_board.board_width):
+            for column in range(game_board.board_height):
                 grid_area = pygame.Rect((row * self.grid_size, column * self.grid_size),
                                         (self.grid_size, self.grid_size))
-                pygame.draw.rect(self.window, (250, 250, 250), grid_area)
+                pygame.draw.rect(self.window, (200, 200, 200), grid_area)
 
     def draw_snake(self, snake):
         """Piirtää madon"""
         for position in snake.body:
-            pygame.draw.rect(self.window, (250, 100, 200),
+            pygame.draw.rect(self.window, (0, 0, 0),
                              pygame.Rect(position[1], position[0],
                                          self.grid_size, self.grid_size))
-            pygame.draw.rect(self.window, (200, 200, 200),
-                             pygame.Rect(position[1], position[0],
-                                         self.grid_size, self.grid_size), 1)
 
     def draw_food(self, apple):
         """Piirtää omenan"""
         for _ in apple.positions:
-            pygame.draw.rect(self.window, (10, 250, 100),
+            pygame.draw.rect(self.window, (200, 0, 0),
                              [apple.position_apple_width, apple.position_apple_height,
                               self.grid_size, self.grid_size])
 
     def draw_points(self, points):
         """Piirtää pisteet"""
-        font = pygame.font.SysFont('Times New Roman', 30)
-        text = font.render(f'Points: {points}', False, (200, 200, 200))
-        self.window.blit(text, (700, 60))
+        font = pygame.font.SysFont('Times New Roman', 25)
+        text = font.render(f'POINTS: {points}', False, (0, 0, 0))
+        self.window.blit(text, (460, 10))
 
     def draw_menu_text(self):
         """Piirtää 'Main Menu' tekstin päävalikkoon"""
         font = pygame.font.SysFont('Times New Roman', 70)
         text = font.render(f'MAIN MENU', False, (200, 200, 200))
-        self.window.blit(text, ((self.display_width // 3) - 40, 100))
+        self.window.blit(text, (self.display_width // 4 - 50, 80))
 
     def draw_start_button(self):
         """Piirtää 'Start' tekstin päävalikkoon"""
         pygame.draw.rect(self.window, (200, 200, 200),
-                         pygame.Rect((self.display_width // 3) + 25, 250, 250, 50))
+                         pygame.Rect((self.display_width // 4) + 20, 200, 250, 50))
         font = pygame.font.SysFont('Times New Roman', 40)
         text = font.render(f'START GAME', False, (0, 0, 0))
-        self.window.blit(text, ((self.display_width // 3) + 25, 250))
+        self.window.blit(text, (self.display_width // 4 + 20, 200))
 
     def draw_instruction_button(self):
         """Piirtää 'Instructions' tekstin päävalikkoon"""
         pygame.draw.rect(self.window, (200, 200, 200),
-                         pygame.Rect(self.display_width // 3, 350, 300, 50))
+                         pygame.Rect(self.display_width // 4 - 2, 400, 290, 50))
         font = pygame.font.SysFont('Times New Roman', 40)
         text = font.render(f'INSTRUCTIONS', False, (0, 0, 0))
-        self.window.blit(text, (self.display_width // 3, 350))
+        self.window.blit(text, (self.display_width // 4 - 2, 400))
+
+    def draw_leaderboard_button(self):
+        pygame.draw.rect(self.window, (200, 200, 200),
+                         pygame.Rect(self.display_width // 4 - 5, 300, 300, 50))
+        font = pygame.font.SysFont('Times New Roman', 40)
+        text = font.render(f'LEADERBOARD', False, (0, 0, 0))
+        self.window.blit(text, (self.display_width // 4 - 5, 300))
+
 
     def draw_back_button(self):
         """Piirtää 'Back' tekstin käyttöohjevalikkoon"""
-        pygame.draw.rect(self.window, (200, 200, 200), pygame.Rect(900, 600, 80, 30))
+        pygame.draw.rect(self.window, (200, 200, 200), pygame.Rect(440, 560, 149, 26))
         font = pygame.font.SysFont('Times New Roman', 20)
-        text = font.render(f'Go Back', False, (0, 0, 0))
-        self.window.blit(text, (900, 600))
+        text = font.render(f'BACK TO MENU', False, (0, 0, 0))
+        self.window.blit(text, (440, 560))
 
     def draw_instructions(self):
         """Piirtää käyttöohjeet"""
-        font = pygame.font.SysFont('Times New Roman', 40)
-        text = font.render(f'Eat the apples, but do not hit the walls or your own tail!',
+        font = pygame.font.SysFont('Times New Roman', 25)
+        text = font.render('Eat the apples, but do not hit the walls or your own tail!',
                            False, (200, 200, 200))
-        self.window.blit(text, (60, 300))
+        self.window.blit(text, (20, 250))
 
     def draw_form(self):
         """Piirtää tällä hetkellä 'Game over' tekstin"""
-        font = pygame.font.SysFont('Times New Roman', 40)
-        text = font.render('GAME OVER!', False, (200, 200, 200))
-        self.window.blit(text, (350, 300))
+        font1 = pygame.font.SysFont('Times New Roman', 60)
+        over = font1.render('GAME OVER', False, (0, 0, 0))
+        self.window.blit(over, (100, 50))
+        font2 = pygame.font.SysFont('Times New Roman', 30)
+        thanks = font2.render('Thank you for playing!', False, (0, 0, 0))
+        self.window.blit(thanks, (135, 150))
+        
+
+    def draw_input_box(self):
+        font = pygame.font.SysFont('Times New Roman', 25)
+        nickname = font.render('Enter nickname: ', False, (0, 0, 0))
+        self.window.blit(nickname, (30, 250))
+        pygame.draw.rect(self.window, (250, 250, 250), pygame.Rect(220, 250, 300, 40))
+        pygame.draw.rect(self.window, (0, 0, 0), pygame.Rect(220, 250, 300, 40), 5)
+
+    def draw_enter_button(self):
+        pygame.draw.rect(self.window, (0, 0, 0), pygame.Rect(220, 300, 80, 30))
+        pygame.draw.rect(self.window, (250, 250, 250), pygame.Rect(220, 300, 80, 30), 1)
+        font = pygame.font.SysFont('Times New Roman', 20)
+        text = font.render(f'ENTER', False, (200, 200, 200))
+        self.window.blit(text, (227, 303))
+        
+    def draw_leaderboard(self):
+        font = pygame.font.SysFont('Times New Roman', 20)
+        text = font.render(f'LEADERBOARD',
+                           False, (200, 200, 200))
+        self.window.blit(text, (10, 10))
 

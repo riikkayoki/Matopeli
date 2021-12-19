@@ -17,4 +17,7 @@ class Points:
                 abs(snake_position_height - apple_position_width) <= 20:
             return True
         return False
+    
+    def reset_points(self):
+        self.points = 0
 

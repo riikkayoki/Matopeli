@@ -21,7 +21,6 @@ class Snake:
         self.directions = {'RIGHT': (0, 1), 'LEFT': (0, -1),
                            'UP': (-1, 0), 'DOWN': (1, 0)}
         self.direction = random.choice(['RIGHT', 'LEFT', 'UP', 'DOWN'])
-        self.length = 1
         self.clock = pygame.time.Clock()
 
     def turn_snake(self, direction):
@@ -43,7 +42,6 @@ class Snake:
 
     def increase_snake_length(self):
         """Lisää madon pituutta"""
-        self.length += 1
         for _ in range(30):
             self.body.append([self.position_snake_width, self.position_snake_height])
 
@@ -51,9 +49,9 @@ class Snake:
         """Tarkistaa osuuko pelilaudan reunaan.
 
         Returns: True, jos mato osuu pelilaudan reunaan, muussa tapauksessa False"""
-        if self.position_snake_width == 630 or self.position_snake_width == 60:
+        if self.position_snake_width == 570 or self.position_snake_width == 0:
             return True
-        if self.position_snake_height == 630 or self.position_snake_height == 60:
+        if self.position_snake_height == 570 or self.position_snake_height == 0:
             return True
         return False
 
@@ -64,3 +62,10 @@ class Snake:
         if self.body[0] in self.body[60:]:
             return True
         return False
+
+    def reset_snake(self):
+        self.body = [[self.position_snake_width, self.position_snake_height]]
+        self.position_snake_width = random.randint(60, self.width)
+        self.position_snake_height = random.randint(60, self.height)
+        self.turn_snake(self.direction)
+        self.move()

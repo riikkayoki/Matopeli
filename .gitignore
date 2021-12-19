@@ -23,3 +23,5 @@ entities/apple.pyc
 tests/__init__.pyc
 tests/entities/__init__.pyc
 points.pyc
+leaderboard.db
+
