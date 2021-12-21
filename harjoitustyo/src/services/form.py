@@ -9,15 +9,18 @@ class Form:
         self.display = UserInterface(600, 600, (200, 200, 200))
         self.write_rect = pygame.Rect(220, 250, 300, 40)
         self.enter_rect = pygame.Rect(220, 300, 80, 30)
- 
+        self.user_text = ''
 
-    def form(self):
+    def form_topscore(self):
         """Päivittää graafista käyttöliityymää"""
 
         with self.display:
-            self.display.draw_form_texts()
-            self.display.draw_input_box()
+            self.display.draw_highscore_form(self.user_text)
             self.display.draw_enter_button()
+    
+    def form_lowscore(self):
+        with self.display:
+            self.display.draw_lowscore_form()
 
     def write(self, mouse):
         if self.write_rect.collidepoint(mouse):

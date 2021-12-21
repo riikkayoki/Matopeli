@@ -1,3 +1,4 @@
+
 class Points:
     """Luokka, jonka avulla määritellään milloin pelaaja saa pisteitä
 
@@ -13,6 +14,7 @@ class Points:
         """Antaa pelaajalle pisteen
 
         Returns: True, jos mato osui omenaan, muussa tapauksessa False"""
+
         if abs(snake_position_width - apple_position_height) <= 20 and \
                 abs(snake_position_height - apple_position_width) <= 20:
             return True
@@ -20,4 +22,9 @@ class Points:
     
     def reset_points(self):
         self.points = 0
+
+   
+
+
+
 

@@ -6,11 +6,12 @@ from entities.apple import Apple
 from ui.userinterface import UserInterface
 from services.points import Points
 from services.main_menu import MainMenu
-from form import Form
+from services.form import Form
 from services.instructions_menu import InstructionsMenu
 from services.leaderboard_menu import LeaderBoardMenu
- 
- 
+from repositories.leaderboard_repository import LeaderBoardRepository
+from initialize_database import get_database_connection
+
 class Game:
     def __init__(self):
         pygame.init()
@@ -24,10 +25,11 @@ class Game:
         self.form = Form()
         self.instructions = InstructionsMenu()
         self.leaderboard = LeaderBoardMenu()
+        self.database = LeaderBoardRepository(get_database_connection())
         self.start_game, self.stop_game, self.pause = False, False, False
-        self.open_instructions, self.open_leaderboard= False, False
+        self.open_instructions, self.open_leaderboard = False, False
         self.go_back, self.enter = False, False
-        self.text, self.writing = '', False
+        self.writing = False
         
 
     def events(self):
@@ -47,6 +49,7 @@ class Game:
                         self.go_back = True
                     if self.form.write(pygame.mouse.get_pos()):
                         self.writing = True
+                    
                     if self.form.press_enter(pygame.mouse.get_pos()):
                         self.enter = True
             
@@ -59,15 +62,13 @@ class Game:
                     self.snake.turn_snake('DOWN')
                 if event.key == pygame.K_UP:
                     self.snake.turn_snake('UP')
- 
-                if self.writing:
-                    if event.key == pygame.K_RETURN:
-                        print(text)
-                        text = ''
-                    elif event.key == pygame.K_BACKSPACE:
-                        self.text = self.text[:-1]
-                    else:
-                        self.text += event.unicode
+
+                
+                if event.key == pygame.K_BACKSPACE:
+                    self.form.user_text = self.form.user_text[:-1]
+                else:
+                    self.form.user_text += event.unicode
+                    print(self.form.user_text)
  
 
     def update_points(self):
@@ -95,6 +96,7 @@ class Game:
         self.snake.reset_snake()
         self.apple.reset_apple()
         self.points.reset_points()
+
  
     def run(self):
         with self.display:
@@ -105,23 +107,29 @@ class Game:
             self.display.draw_apple(self.apple)
             self.display.draw_snake(self.snake)
             self.display.draw_points(self.points.points)
+
+    def end_game(self):
+        self.pause = False
+        self.start_game = False
+        self.reset_game()
+        self.stop_game = False
  
     def start(self):
         while True:
             if self.events() is False:
                 break
- 
             elif self.start_game:
                 self.run()
                 self.snake.snake_speed(200)
- 
             elif self.stop_game:
-                self.form.form()
+                self.form.form_topscore()
                 if self.enter:
-                    self.pause = False
-                    self.start_game = False
-                    self.reset_game()
-                    self.stop_game = False
+                    self.end_game()
+                    self.open_leaderboard = True
+                else:
+                    self.form.form_lowscore()
+                    pygame.time.delay(2000)
+                    self.end_game()
                     self.open_leaderboard = False
  
             elif self.open_instructions:

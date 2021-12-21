@@ -31,6 +31,9 @@ class UserInterface:
     
     def rect(self, color, area):
         pygame.draw.rect(self.window, color, pygame.Rect(area))
+    
+    def rect_borders(self, color, area, size):
+        pygame.draw.rect(self.window, color, pygame.Rect(area), size)
 
     def draw_game_board(self, game_board):
         """Piirtää pelilaudan"""
@@ -61,16 +64,19 @@ class UserInterface:
 
     def draw_start_button(self):
         """Piirtää 'Start' tekstin päävalikkoon"""
-        self.rect(self.gray, ((self.display_width // 4) + 20, 200, 250, 50))
-        self.text(40, 'START GAME', self.black, (self.display_width // 4 + 20, 200))
+        self.rect(self.gray, ((self.display_width // 4) + 18, 200, 258, 50))
+        self.rect_borders(self.white, (self.display_width // 4 + 18, 200, 258, 50), 5)
+        self.text(40, 'START GAME', self.black, (self.display_width // 4 + 22, 200))
 
     def draw_instruction_button(self):
         """Piirtää 'Instructions' tekstin päävalikkoon"""
-        self.rect(self.gray, (self.display_width // 4 - 2, 400, 290, 50))
+        self.rect(self.gray, (self.display_width // 4 - 8, 397, 300, 50))
+        self.rect_borders(self.white, (self.display_width // 4 - 8, 397, 300, 50), 5)
         self.text(40, 'INSTRUCTIONS', self.black, (self.display_width // 4 - 2, 400))
 
     def draw_leaderboard_button(self):
-        self.rect(self.gray, (self.display_width // 4 - 5, 300, 300, 50))
+        self.rect(self.gray, (self.display_width // 4 - 12, 300, 310, 50))
+        self.rect_borders(self.white, (self.display_width // 4 - 12, 300, 310, 50), 5)
         self.text(40, 'LEADERBOARD', self.black, (self.display_width // 4 - 5, 300))
 
     def draw_back_button(self):
@@ -80,23 +86,31 @@ class UserInterface:
 
     def draw_instructions(self):
         """Piirtää käyttöohjeet"""
-        self.text(25, 'Eat the apples, but do not hit the walls or your own tail!', self.gray, (20, 250))
+        self.text(25, 'Eat the apples, but do not hit the walls or your own tail!', 
+        self.gray, (20, 250))
 
-    def draw_form_texts(self):
+    def draw_highscore_form(self, user_text):
         """Piirtää tällä hetkellä 'Game over' tekstin"""
-        self.text(60, 'GAME OVER :-(', self.black, (80, 50))
+        self.text(60, 'GAME OVER', self.black, (80, 50))
         self.text(30, 'Thank you for playing!', self.black, (135, 150))
         self.text(25, 'Enter nickname: ', self.black, (30, 250))
-        
-    def draw_input_box(self):
         self.rect(self.white, (220, 250, 300, 40))
-        pygame.draw.rect(self.window, (0, 0, 0), pygame.Rect(220, 250, 300, 40), 5)
-
+        self.rect_borders(self.black, (220, 250, 300, 40), 4)
+        self.text(22, user_text, self.black, (230, 255))
+    
+    def draw_lowscore_form(self):
+        self.text(60, 'GAME OVER!', self.black, (90, 150))
+        self.text(40, 'You did not get a highscore :-(', self.black, (50, 240))
+        self.text(25, 'Thank you for playing though :-)', self.black, (105, 320))
+    
     def draw_enter_button(self):
         self.rect(self.black, (220, 300, 80, 30))
-        pygame.draw.rect(self.window, (250, 250, 250), pygame.Rect(220, 300, 80, 30), 1)
+        self.rect_borders(self.white, (220, 300, 80, 30), 1)
         self.text(20, 'ENTER', self.gray, (227, 303))
         
     def draw_leaderboard(self):
         self.text(20, 'LEADERBOARD', self.gray, (10, 10))
+
+    def draw_top_10(self):
+        pass
   

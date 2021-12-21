@@ -1,8 +1,14 @@
+import os
 import sqlite3
 
-database = sqlite3.connect("leaderboard.db")
-database.isolation_level = None
+dirname = os.path.dirname(__file__)
 
 
 def get_database_connection():
-    return database
+    
+    connection = sqlite3.connect(
+        os.path.join(dirname, "../..", "data", "leaderboard.db")
+        )
+    connection.row_factory = sqlite3.Row
+
+    return connection
