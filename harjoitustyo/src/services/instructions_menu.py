@@ -1,4 +1,4 @@
-from ui.userinterface import UserInterface
+from harjoitustyo.src.ui.game_ui import UserInterface
 import pygame
 
 class InstructionsMenu:
@@ -10,7 +10,7 @@ class InstructionsMenu:
     '''
 
     def __init__(self):
-        
+
         '''Luokan konstruktori, joka luo käyttöohjevalikon pelille'''
 
         self.display = UserInterface(600, 600, (0, 0, 0))

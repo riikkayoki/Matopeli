@@ -1,5 +1,5 @@
-from ui.userinterface import UserInterface
-
+from harjoitustyo.src.ui.game_ui import UserInterface
+from ui.leaderboard_menu_ui import LeaderboardUI
 class LeaderBoardMenu:
 
     '''Luokka, joka kuvaa tulostaulu-valikkoa.'''
@@ -8,7 +8,7 @@ class LeaderBoardMenu:
 
         '''Luokan konstruktori, joka luo tulostaulu-valikon.'''
 
-        self.display = UserInterface(600, 600, (0, 0, 0))
+        self.display = LeaderboardUI(600, 600, (0, 0, 0))
       
     def show_leaderboard(self):
 

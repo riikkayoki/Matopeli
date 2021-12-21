@@ -15,14 +15,13 @@ def create_table(connection):
     cursor = connection.cursor()
 
     cursor.execute('''
-        CREATE TABLE Leaderboard (username TEXT, points INTEGER)
-        );
+        CREATE TABLE Leaderboard (username TEXT, points INTEGER);
     ''')
 
     connection.commit()
 
-
 def initialize_database():
+    
     '''Alustaa tietokantataulun.'''
 
     connection = get_database_connection()

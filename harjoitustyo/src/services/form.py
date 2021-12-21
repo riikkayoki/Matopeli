@@ -1,4 +1,4 @@
-from ui.userinterface import UserInterface
+from ui.form_ui import FormUI
 import pygame
 
 
@@ -17,7 +17,7 @@ class Form:
 
         '''Luokan konstruktori, joka luo pelin jälkeisen näkymän pelaajalle'''
 
-        self.display = UserInterface(600, 600, (200, 200, 200))
+        self.display = FormUI()
         self.write_rect = pygame.Rect(220, 250, 300, 40)
         self.enter_rect = pygame.Rect(220, 300, 80, 30)
         self.user_text = ''

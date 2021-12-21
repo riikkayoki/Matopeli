@@ -13,7 +13,7 @@ class LeaderBoardRepository:
         self._connection = connection
     
 
-    def _find_top10(self):
+    def find_top10(self):
 
         '''Palauttaa 10 parasta pelaajaa.
         
@@ -22,16 +22,19 @@ class LeaderBoardRepository:
         
         cursor = self._connection.cursor()
     
-        file = cursor.execute('''SELECT username, points 
+        file = cursor.execute('''
+                    SELECT username, points 
                     FROM Leaderboard
-                    ORDER BY points
+                    ORDER BY points DESC
                     LIMIT 10''').fetchall()
 
         cursor.close()
+
         return file
+        
+        
 
-
-    def _create_new_highscore(self, username, points):
+    def create_new_highscore(self, username, points):
 
         '''Lisää pelaajan tulostauluun. 
         
@@ -43,4 +46,10 @@ class LeaderBoardRepository:
         cursor = self._connection.cursor()
         cursor.execute('INSERT INTO Leaderboard (username, points) VALUES (?, ?);', [username, points])
         cursor.close()
+
+   
+  
+
+   
+
    

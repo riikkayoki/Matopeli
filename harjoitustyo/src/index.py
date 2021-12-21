@@ -3,7 +3,7 @@ import pygame
 from services.gameboard import GameBoard
 from entities.snake import Snake
 from entities.apple import Apple
-from ui.userinterface import UserInterface
+from ui.game_ui import GameUI
 from services.points import Points
 from services.main_menu import MainMenu
 from services.form import Form
@@ -16,7 +16,7 @@ class Game:
     def __init__(self):
         pygame.init()
         self.clock = pygame.time.Clock()
-        self.display = UserInterface(600, 600, (0, 0, 0))
+        self.display = GameUI(600, 600, (0, 0, 0))
         self.game_board = GameBoard(22, 22, pygame.Rect(0, 0, 600, 600))
         self.snake = Snake(570, 570)
         self.apple = Apple(570, 570)
@@ -122,9 +122,10 @@ class Game:
             elif self.stop_game:
                 self.form.form()
                 if self.enter:
-                    self.database._create_new_highscore(self.form.user_text, self.points.points)
-                    print(self.database._find_top10())
+                    
+                    self.database.create_new_highscore(self.form.user_text, self.points.points)
                     self.end_game()
+                    print(self.database.find_top10())
                     self.open_leaderboard = True
  
             elif self.open_instructions:
@@ -144,8 +145,6 @@ class Game:
             self.enter = False
             self.writing = False
          
-
- 
  
 if __name__ == "__main__":
     GAME = Game()
