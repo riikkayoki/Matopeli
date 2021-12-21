@@ -1,10 +1,14 @@
 import pygame
+from repositories.leaderboard_repository import LeaderBoardRepository
+from initialize_database import get_database_connection
 
 class UserInterface:
 
     """Luokka joka luo graafisen käyttäliittymän"""
     def __init__(self, display_width, display_height, display_color):
+
         """Luokan konstruktori"""
+
         self.display_width = display_width
         self.display_height = display_height
         self.display_color = display_color
@@ -15,6 +19,7 @@ class UserInterface:
         self.black = (0, 0, 0)
         self.white = (250, 250, 250)
         self.red = (200, 0, 0)
+        self.database = LeaderBoardRepository(get_database_connection())
 
     def __enter__(self):
         """Päivittää pelin taustan"""
@@ -109,8 +114,13 @@ class UserInterface:
         self.text(20, 'ENTER', self.gray, (227, 303))
         
     def draw_leaderboard(self):
-        self.text(20, 'LEADERBOARD', self.gray, (10, 10))
+        self.text(35, 'LEADERBOARD', self.gray, (165, 20))
 
     def draw_top_10(self):
-        pass
-  
+        self.text(23, 'ranking', self.gray, (160, 100))
+        self.text(23, 'username', self.gray, (250, 100))
+        self.text(23, 'points', self.gray, (360, 100))
+
+
+
+        

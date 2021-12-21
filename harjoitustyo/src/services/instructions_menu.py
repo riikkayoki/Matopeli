@@ -2,13 +2,23 @@ from ui.userinterface import UserInterface
 import pygame
 
 class InstructionsMenu:
-    """Luokka, jonka avulla luodaan pelille käyttöohje valikko"""
+
+    '''Luokka, joka kuvaa käyttöohjevalikkoa.
+    
+    Attributes:
+            self.display: Olio, jolla on UserInterface-luokkaa vastaavat metodit.
+    '''
+
     def __init__(self):
-        """Luokan konstruktori"""
+        
+        '''Luokan konstruktori, joka luo käyttöohjevalikon pelille'''
+
         self.display = UserInterface(600, 600, (0, 0, 0))
     
     def show_instructions(self):
-        """Päivittää graafista käyttöliittymää"""
+
+        '''Päivittää graafista käyttöliittymää'''
+
         with self.display:
             self.display.draw_back_button()
             self.display.draw_instructions()

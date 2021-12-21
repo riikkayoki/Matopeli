@@ -13,8 +13,7 @@ Sovellusta voi käyttää yksi pelaaja kerrallaan.
 
 Pelin tarkoituksena on ohjata matoa peliruudukossa ja syödä omenoita. Syömällä omenoita, käyttäjä saa pisteitä.
 Omenoita ilmestyy satunnaisessa järjestyksessä peliruudukkoon yksi kerrallaan.
-Pisteiden kertyessä, myös pelin vaikeustaso muuttuu eli madon etenemisnopeus kiihtyy.
-Peli loppuu mikäli mato törmää itseensä. 
+Peli loppuu mikäli mato törmää seinään tai itseensä. 
 
 ## Huomio Python-versiosta
 
@@ -39,10 +38,7 @@ Sovelluksen toiminta on testattu Python 3.8.10 versiolla.
 1. Asenna riippuvuudet komennolla: `poetry install`
 
 
-3. Suorita vaadittavat alustustoimenpiteet komennolla:`poetry run invoke build`
-
-
-3. Käynnistä sovellus komennolla: `poetry run invoke start`
+2. Käynnistä sovellus komennolla: `poetry run invoke start`
 
 
 ## Komentorivitoiminnot

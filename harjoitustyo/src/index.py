@@ -68,9 +68,7 @@ class Game:
                     self.form.user_text = self.form.user_text[:-1]
                 else:
                     self.form.user_text += event.unicode
-                    print(self.form.user_text)
  
-
     def update_points(self):
         if self.points.get_point(self.snake.position_snake_width,
                                  self.snake.position_snake_height,
@@ -122,15 +120,12 @@ class Game:
                 self.run()
                 self.snake.snake_speed(200)
             elif self.stop_game:
-                self.form.form_topscore()
+                self.form.form()
                 if self.enter:
+                    self.database._create_new_highscore(self.form.user_text, self.points.points)
+                    print(self.database._find_top10())
                     self.end_game()
                     self.open_leaderboard = True
-                else:
-                    self.form.form_lowscore()
-                    pygame.time.delay(2000)
-                    self.end_game()
-                    self.open_leaderboard = False
  
             elif self.open_instructions:
                 self.instructions.show_instructions()
@@ -139,6 +134,7 @@ class Game:
  
             elif self.open_leaderboard:
                 self.leaderboard.show_leaderboard()
+                
                 if self.go_back:
                     self.open_leaderboard = False
  
@@ -147,6 +143,8 @@ class Game:
             self.go_back = False
             self.enter = False
             self.writing = False
+         
+
  
  
 if __name__ == "__main__":
