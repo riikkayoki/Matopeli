@@ -1,7 +1,7 @@
 import pygame
 
 class UIStyle:
-    def __init__(self) -> None:
+    def __init__(self):
         self.grey = (200, 200, 200)
         self.black = (0, 0, 0)
         self.white = (250, 250, 250)

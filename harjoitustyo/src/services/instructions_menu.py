@@ -1,5 +1,4 @@
-from harjoitustyo.src.ui.game_ui import UserInterface
-import pygame
+from ui.instructions_menu_ui import InstructionsUI
 
 class InstructionsMenu:
 
@@ -13,7 +12,7 @@ class InstructionsMenu:
 
         '''Luokan konstruktori, joka luo käyttöohjevalikon pelille'''
 
-        self.display = UserInterface(600, 600, (0, 0, 0))
+        self.display = InstructionsUI(600, 600, (0, 0, 0))
     
     def show_instructions(self):
 

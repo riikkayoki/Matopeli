@@ -1,5 +1,5 @@
 import pygame
-from styling_ui import UIStyle
+from ui.styling_ui import UIStyle
 
 class MainMenuUI:
 
@@ -12,10 +12,10 @@ class MainMenuUI:
     def __init__(self, display_width, display_height, display_color):
 
         """Luokan konstruktori"""
-
         self.display_width = display_width
         self.display_height = display_height
         self.display_color = display_color
+        pygame.display.set_mode((self.display_width, display_height))
         self.window = pygame.display.get_surface()
         self.style = UIStyle()
     
@@ -29,7 +29,6 @@ class MainMenuUI:
 
         '''Päivittää näyttöä'''
         pygame.display.update()
-     
 
     def draw_menu_text(self):
 
@@ -52,7 +51,7 @@ class MainMenuUI:
         '''Piirtää 'Leaderboard' -napin päävalikkoon'''
 
         self.style.button(self.style.grey, 
-                        (self.style.display_width // 4 - 12, 300, 310, 50), 
+                        (self.display_width // 4 - 12, 300, 310, 50), 
                         self.style.grey, 5, 40, 'LEADERBOARD', 
                         self.style.black, (self.display_width // 4 - 5, 300))
 

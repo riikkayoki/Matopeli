@@ -1,7 +1,7 @@
 
 class GameBoard:
 
-    '''Luokka, jonka avulla luodaan pelilauta
+    '''Luokka, joka kuvaa pelilautaa.
 
     Attributes:
         self.board_width: Merkkijonoarvo, joka kuvaa pelilaudan leveyttä.

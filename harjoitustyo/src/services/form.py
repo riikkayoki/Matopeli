@@ -17,7 +17,7 @@ class Form:
 
         '''Luokan konstruktori, joka luo pelin jälkeisen näkymän pelaajalle'''
 
-        self.display = FormUI()
+        self.display = FormUI(600, 600, (200, 200, 200))
         self.write_rect = pygame.Rect(220, 250, 300, 40)
         self.enter_rect = pygame.Rect(220, 300, 80, 30)
         self.user_text = ''

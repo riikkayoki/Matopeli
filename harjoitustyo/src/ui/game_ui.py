@@ -1,5 +1,5 @@
 import pygame
-from styling_ui import UIStyle
+from ui.styling_ui import UIStyle
 
 class GameUI:
 

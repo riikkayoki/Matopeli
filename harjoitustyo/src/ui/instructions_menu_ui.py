@@ -1,5 +1,5 @@
 import pygame
-from styling_ui import UIStyle
+from ui.styling_ui import UIStyle
 
 class InstructionsUI:
 
@@ -42,6 +42,6 @@ class InstructionsUI:
 
         '''Piirtää BACK TO MENU -napin'''
 
-        self.style.button(self.style.grey, (440, 560, 149, 26), 2, 
-                            self.style.white, 20, 'BACK TO MENU', 
-                            self.style.black, (430, 540))
+        self.style.button(self.style.white, (426, 550, 155, 30), self.style.grey, 
+                            2, 20, 'BACK TO MENU', 
+                            self.style.black, (430, 553))

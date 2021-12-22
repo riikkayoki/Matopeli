@@ -1,5 +1,4 @@
-from harjoitustyo.src.ui.game_ui import UserInterface
-from ui.leaderboard_menu_ui import LeaderboardUI
+from ui.leaderboard_menu_ui import LeaderboardMenuUI
 class LeaderBoardMenu:
 
     '''Luokka, joka kuvaa tulostaulu-valikkoa.'''
@@ -8,7 +7,7 @@ class LeaderBoardMenu:
 
         '''Luokan konstruktori, joka luo tulostaulu-valikon.'''
 
-        self.display = LeaderboardUI(600, 600, (0, 0, 0))
+        self.display = LeaderboardMenuUI(600, 600, (0, 0, 0))
       
     def show_leaderboard(self):
 
@@ -16,8 +15,10 @@ class LeaderBoardMenu:
 
         with self.display:
             self.display.draw_back_button()
-            self.display.draw_leaderboard()
-            self.display.draw_top_10()
+            self.display.draw_leaderboard_headlines()
+            self.display.draw_leaderboard_results()
+          
+         
         
     
    
