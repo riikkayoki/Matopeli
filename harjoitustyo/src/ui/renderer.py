@@ -19,4 +19,5 @@ class Renderer:
     def __exit__(self, exc_type, exc_val, exc_tb):
 
         '''Päivittää näyttöä'''
+        
         pygame.display.update()

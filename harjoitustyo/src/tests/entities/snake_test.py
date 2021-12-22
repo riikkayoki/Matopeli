@@ -1,5 +1,4 @@
 import unittest
-import random
 from entities.snake import Snake
 
 
@@ -17,10 +16,17 @@ class TestSnake(unittest.TestCase):
         self.assertEqual(self.snake.position_snake_height == 60, False)
 
     def test_increase_snake_length(self):
-        self.assertEqual(self.snake.length, 1)
         self.snake.increase_snake_length()
-        self.assertEqual(self.snake.length, 2)
 
     def test_snake_collision(self):
-        pass
+        self.assertEqual(self.snake.body[0] == self.snake.body[60:], False)
+    
+    def test_reset_snake(self):
+        self.assertEqual(self.snake.body, [[self.snake.position_snake_width, self.snake.position_snake_height]])
+        self.assertEqual(self.snake.turn_snake(self.snake.direction), None)
+        self.assertEqual(self.snake.move(), None)
 
+    def test_game_over(self):
+        self.assertEqual(self.snake.border_collision(), False)
+        self.assertEqual(self.snake.snake_collision(), False)
+        

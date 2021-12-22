@@ -7,15 +7,14 @@ from ui.form_ui import FormUI
 from ui.instructions_menu_ui import InstructionsUI
 from ui.leaderboard_menu_ui import LeaderboardMenuUI
 from ui.main_menu_ui import MainMenuUI
+from ui.renderer import Renderer
 from services.points import Points
 from repositories.leaderboard_repository import LeaderBoardRepository
 from initialize_database import get_database_connection
-from ui.renderer import Renderer
+
 
 class Game:
     def __init__(self):
-
-        pygame.init()
         self.clock = pygame.time.Clock()
         self.snake = Snake(570, 570)
         self.apple = Apple(570, 570)
@@ -62,7 +61,6 @@ class Game:
                 if event.key == pygame.K_UP:
                     self.snake.turn_snake('UP')
 
-                
                 if event.key == pygame.K_BACKSPACE:
                     self.form.user_text = self.form.user_text[:-1]
                 else:
@@ -76,13 +74,12 @@ class Game:
             self.pause = True
 
     def start(self):
-
         while True:
             if self.events() is False:
                 break
             elif self.start_game:
                 self.game.run_game()
-                self.snake.snake_speed(200)
+                pygame.time.clock(200)
             elif self.stop_game:
                 self.form.form()
                 if self.enter:
@@ -95,9 +92,10 @@ class Game:
                     self.points.reset_points()
                     self.stop_game = False
                     self.open_leaderboard = True
- 
+
             elif self.open_instructions:
                 self.instructions.run_instructions_menu()
+
                 if self.go_back:
                     self.open_instructions = False
  
