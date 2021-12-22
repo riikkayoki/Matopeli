@@ -1,34 +1,37 @@
 import pygame
 from ui.styling_ui import UIStyle
+from services.gameboard import GameBoard
+from entities.snake import Snake
+from entities.apple import Apple
+from services.points import Points
+from ui.renderer import Renderer
 
 class GameUI:
 
-    """Luokka joka luo graafisen käyttäliittymän"""
+    """Luokka joka kuvaa pelin graafista käyttöliittymää."""
     
-    def __init__(self, display_width, display_height, display_color):
+    def __init__(self):
 
         """Luokan konstruktori"""
 
-        self.display_width = display_width
-        self.display_height = display_height
-        self.display_color = display_color
+        self.display = Renderer(600, 600, (0, 0, 0))
         self.grid_size = 30
-        pygame.display.set_mode((self.display_width, display_height))
-        self.window = pygame.display.get_surface()
         self.style = UIStyle()
+        self.game_board = GameBoard(22, 22, pygame.Rect(0, 0, 600, 600))
+        self.snake = Snake(570, 570)
+        self.apple = Apple(570, 570)
+        self.points = Points()
 
-    def __enter__(self):
-
-        """Päivittää pelin taustan"""
-
-        self.window.fill(self.display_color)
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-
-        """Päivittää näyttöä"""
-
-        pygame.display.update()
-
+    def run_game(self):
+        with self.display:
+            self.snake.move()
+            self.points.update_points()
+            self.snake.game_over()
+            self.draw_game_board(self.game_board)
+            self.draw_apple(self.apple)
+            self.draw_snake(self.snake)
+            self.draw_points(self.points.points)
+    
     def draw_game_board(self, game_board):
 
         """Piirtää pelilaudan"""

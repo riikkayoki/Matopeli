@@ -1,31 +1,26 @@
 import pygame
 from ui.styling_ui import UIStyle
-
+from ui.renderer import Renderer
 
 class FormUI:
-    def __init__(self, display_width, display_height, display_color):
+    def __init__(self):
 
         """Luokan konstruktori"""
 
-        self.display_width = display_width
-        self.display_height = display_height
-        self.display_color = display_color
- 
-        pygame.display.set_mode((self.display_width, display_height))
-        self.window = pygame.display.get_surface()
+        self.display = Renderer(600, 600, (0, 0, 0))
         self.style = UIStyle()
-    
-    def __enter__(self):
+        self.write_rect = pygame.Rect(220, 250, 300, 40)
+        self.enter_rect = pygame.Rect(220, 300, 80, 30)
+        self.user_text = ''
 
-        '''Päivittää näytön taustan'''
+    def form(self):
 
-        self.window.fill(self.display_color)
+        '''Päivittää graafista käyttöliityymää, joka tulee näkyviin, 
+        kun pelaaja on sijoittunut top 10 pelaajan joukkoon pisteiden perusteella.'''
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
-
-        '''Päivittää näyttöä'''
-        
-        pygame.display.update()
+        with self.display:
+            self.draw_highscore_form(self.user_text)
+            self.draw_enter_button()
 
     def draw_highscore_form(self, user_text):
         self.style.text(60, 'GAME OVER', self.style.black, (80, 50))
@@ -39,3 +34,30 @@ class FormUI:
         self.style.rect(self.style.black, (220, 300, 80, 30))
         self.style.rect_borders(self.style.white, (220, 300, 80, 30), 1)
         self.style.text(20, 'ENTER', self.style.grey, (227, 303))
+    
+    def write(self, mouse):
+
+        '''Määrittää painaako pelaaja tekstinsyöttöruutua hiiripainikkeella
+
+        Args: 
+            mouse: hiiripainikkeeen klikkauskohta
+
+        Returns: True, jos pelaaja klikkaa tekstinsyöttöruutua, muussa tapauksessa False'''
+
+        if self.write_rect.collidepoint(mouse):
+            return True
+        return False
+    
+    def press_enter(self, mouse):
+
+        '''Määrittää, painaako pelaaja enter-nappulaa hiiripainikkeella''
+
+        Args: 
+            mouse: hiiripainikkeeen klikkauskohta
+
+        Returns: True, jos pelaaja klikkaa enter-nappulaa, muussa tapauksessa False'''
+
+
+        if self.enter_rect.collidepoint(mouse):
+            return True
+        return False

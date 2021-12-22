@@ -69,3 +69,10 @@ class Snake:
         self.position_snake_height = random.randint(60, self.height)
         self.turn_snake(self.direction)
         self.move()
+
+    def game_over(self):
+        if self.border_collision() or self.snake_collision():
+            return True
+      
+        return False
+        

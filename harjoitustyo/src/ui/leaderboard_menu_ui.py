@@ -2,30 +2,26 @@ import pygame
 from database_connection import get_database_connection
 from repositories.leaderboard_repository import LeaderBoardRepository
 from ui.styling_ui import UIStyle
+from ui.renderer import Renderer
+
 
 class LeaderboardMenuUI:
-    def __init__(self, display_width, display_height, display_color):
+    def __init__(self):
 
         """Luokan konstruktori"""
 
-        self.display_width = display_width
-        self.display_height = display_height
-        self.display_color = display_color
         self.database = LeaderBoardRepository(get_database_connection())
-        pygame.display.set_mode((self.display_width, display_height))
-        self.window = pygame.display.get_surface()
         self.style = UIStyle()
-    
-    def __enter__(self):
+        self.display = Renderer(600, 600, (0, 0, 0))
+        
+    def run_leaderboard_menu(self):
 
-        '''Päivittää näytön taustan'''
+        '''Päivittää graafista käyttöliittymää'''
 
-        self.window.fill(self.display_color)
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-
-        '''Päivittää näyttöä'''
-        pygame.display.update()
+        with self.display:
+            self.draw_back_button()
+            self.draw_leaderboard_headlines()
+            self.draw_leaderboard_results()
 
     def draw_leaderboard_headlines(self):
         self.style.text(30, 'LEADERBOARD', self.style.grey, (180, 25))

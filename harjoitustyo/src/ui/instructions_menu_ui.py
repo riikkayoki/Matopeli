@@ -1,5 +1,6 @@
 import pygame
 from ui.styling_ui import UIStyle
+from ui.renderer import Renderer
 
 class InstructionsUI:
 
@@ -9,27 +10,20 @@ class InstructionsUI:
             self.style: Olio, jolla on UIStyle -luokkaa vastaavat metodit.
             '''
 
-    def __init__(self, display_width, display_height, display_color):
+    def __init__(self):
 
         """Luokan konstruktori"""
 
-        self.display_width = display_width
-        self.display_height = display_height
-        self.display_color = display_color
-        self.window = pygame.display.get_surface()
+        self.display = Renderer(600, 600, (0, 0, 0))
         self.style = UIStyle()
-    
-    def __enter__(self):
 
-        '''Päivittää näytön taustan'''
+    def run_instructions_menu(self):
 
-        self.window.fill(self.display_color)
+        '''Päivittää graafista käyttöliittymää'''
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
-
-        '''Päivittää näyttöä'''
-
-        pygame.display.update()
+        with self.display:
+            self.draw_back_button()
+            self.draw_instructions()
 
     def draw_instructions(self):
 
