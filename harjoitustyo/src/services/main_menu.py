@@ -19,7 +19,7 @@ class MainMenu:
         self.leaderboard_rect = pygame.Rect(self.display.display_width // 4 - 5, 300, 300, 50)
         self.back_rect = pygame.Rect(440, 560, 149, 26)
 
-    def main_menu(self):
+    def run_main_menu(self):
 
         '''Päivittää päävalikon graafista käyttöliityymää'''
 

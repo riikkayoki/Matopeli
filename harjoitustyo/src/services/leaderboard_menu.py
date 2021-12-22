@@ -9,7 +9,7 @@ class LeaderBoardMenu:
 
         self.display = LeaderboardMenuUI(600, 600, (0, 0, 0))
       
-    def show_leaderboard(self):
+    def run_leaderboard_menu(self):
 
         '''Päivittää graafista käyttöliittymää'''
 

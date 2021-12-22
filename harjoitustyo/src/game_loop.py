@@ -35,8 +35,17 @@ class Game:
         self.open_instructions, self.open_leaderboard = False, False
         self.go_back, self.enter = False, False
         self.writing = False
-        
 
+    def run_game(self):
+        with self.display:
+            self.snake.move()
+            self.update_points()
+            self.game_over()
+            self.display.draw_game_board(self.game_board)
+            self.display.draw_apple(self.apple)
+            self.display.draw_snake(self.snake)
+            self.display.draw_points(self.points.points)
+        
     def events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -96,57 +105,41 @@ class Game:
             self.start_game = False
             self.pause = True
  
-    def reset_game(self):
-        self.snake.reset_snake()
-        self.apple.reset_apple()
-        self.points.reset_points()
-
- 
-    def run(self):
-        with self.display:
-            self.snake.move()
-            self.update_points()
-            self.game_over()
-            self.display.draw_game_board(self.game_board)
-            self.display.draw_apple(self.apple)
-            self.display.draw_snake(self.snake)
-            self.display.draw_points(self.points.points)
-
-    def end_game(self):
-        self.pause = False
-        self.start_game = False
-        self.reset_game()
-        self.stop_game = False
- 
     def start(self):
+
         while True:
             if self.events() is False:
                 break
             elif self.start_game:
-                self.run()
+                self.run_game()
                 self.snake.snake_speed(200)
             elif self.stop_game:
                 self.form.form()
                 if self.enter:
                     
-                    self.database.create_new_highscore(self.form.user_text, self.points.points)
-                    self.end_game()
-                    print(self.database.find_top10())
+                    self.database.create_new_highscore(self.form.user_text, 
+                                                    self.points.points)
+                    self.pause = False
+                    self.start_game = False
+                    self.snake.reset_snake()
+                    self.apple.reset_apple()
+                    self.points.reset_points()
+                    self.stop_game = False
                     self.open_leaderboard = True
  
             elif self.open_instructions:
-                self.instructions.show_instructions()
+                self.instructions.run_instructions_menu()
                 if self.go_back:
                     self.open_instructions = False
  
             elif self.open_leaderboard:
-                self.leaderboard.show_leaderboard()
+                self.leaderboard.run_leaderboard_menu()
                 
                 if self.go_back:
                     self.open_leaderboard = False
  
             else:
-                self.menu.main_menu()
+                self.menu.run_main_menu()
             self.go_back = False
             self.enter = False
             self.writing = False

@@ -14,7 +14,7 @@ class InstructionsMenu:
 
         self.display = InstructionsUI(600, 600, (0, 0, 0))
     
-    def show_instructions(self):
+    def run_instructions_menu(self):
 
         '''Päivittää graafista käyttöliittymää'''
 
