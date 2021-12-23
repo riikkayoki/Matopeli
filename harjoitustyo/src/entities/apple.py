@@ -21,3 +21,4 @@ class Apple:
 
     def reset_apple(self):
         self.new_random_position()
+        

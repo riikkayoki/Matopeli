@@ -1,4 +1,4 @@
-from database_connection import get_database_connection
+from database_connection import fake_get_database_connection, get_database_connection
 
 
 def drop_table(connection):
@@ -21,13 +21,16 @@ def create_table(connection):
     connection.commit()
 
 def initialize_database():
-    
-    '''Alustaa tietokantataulun.'''
 
     connection = get_database_connection()
     drop_table(connection)
     create_table(connection)
 
+def fake_initialize_database():
+    
+    connection = fake_get_database_connection()
+    drop_table(connection)
+    create_table(connection)
 
 if __name__ == '__main__':
     initialize_database()

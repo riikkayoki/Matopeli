@@ -1,8 +1,5 @@
-from entities.snake import Snake
-from entities.apple import Apple
 
 class Points:
-
 
     def __init__(self):
 
@@ -20,8 +17,5 @@ class Points:
     def reset_points(self):
         self.points = 0
 
+
    
-
-
-
-

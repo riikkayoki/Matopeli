@@ -13,6 +13,7 @@ class Snake:
         self.directions = {'RIGHT': (0, 1), 'LEFT': (0, -1),
                            'UP': (-1, 0), 'DOWN': (1, 0)}
         self.direction = random.choice(['RIGHT', 'LEFT', 'UP', 'DOWN'])
+        self.length = 0
 
     def turn_snake(self, direction):
         self.direction = direction
@@ -28,6 +29,7 @@ class Snake:
     def increase_snake_length(self):
         for _ in range(30):
             self.body.append([self.position_snake_width, self.position_snake_height])
+        self.length += 1
 
     def border_collision(self):
         if self.position_snake_width == 570 or self.position_snake_width == 0:

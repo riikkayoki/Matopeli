@@ -1,9 +1,8 @@
-.env
-.env.test
-
 harjoitustyo/.pytest_cache
 harjoitustyo/src/.pytest_cache
 harjoitustyo/src/__pycache__
+harjoitustyo/src/initialize_database.pyc
+harjoitustyo/src/database_connection.pyc
 
 harjoitustyo/src/entities/__init__.pyc
 harjoitustyo/src/entities/snake.pyc
@@ -12,6 +11,9 @@ harjoitustyo/src/entities/apple.pyc
 harjoitustyo/src/services/__init__.pyc
 harjoitustyo/src/services/gameboard.pyc
 harjoitustyo/src/services/__pycache__
+
+harjoitustyo/src/repositories/leaderboard_repository.pyc
+harjoitustyo/src/repositories/__pycache__
 
 
 harjoitustyo/src/tests/__init__.pyc
@@ -40,6 +42,8 @@ __pycache__
 .pylintrc
 .pytest_cache
 .idea
+laskarit/.idea
 
 points.pyc
 leaderboard.db
+fake_leaderboard.db
