@@ -7,7 +7,7 @@ class FormUI:
 
         """Luokan konstruktori"""
 
-        self.display = Renderer(600, 600, (0, 0, 0))
+        self.display = Renderer(600, 600, (200, 200, 200))
         self.style = UIStyle()
         self.write_rect = pygame.Rect(220, 250, 300, 40)
         self.enter_rect = pygame.Rect(220, 300, 80, 30)

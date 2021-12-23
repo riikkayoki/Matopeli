@@ -53,7 +53,7 @@ class MainMenuUI:
 
         self.style.button(self.style.grey, 
                         (self.display.display_width // 4 - 12, 300, 310, 50), 
-                        self.style.grey, 5, 40, 'LEADERBOARD', 
+                        self.style.white, 5, 40, 'LEADERBOARD', 
                         self.style.black, (self.display.display_width // 4 - 5, 300))
 
     def draw_instruction_button(self):
@@ -62,7 +62,7 @@ class MainMenuUI:
 
         self.style.button(self.style.grey, 
                         (self.display.display_width // 4 - 8, 397, 300, 50), 
-                        self.style.grey, 5, 40, 'INSTRUCTIONS', 
+                        self.style.white, 5, 40, 'INSTRUCTIONS', 
                         self.style.black, (self.display.display_width // 4 - 2, 400))
 
     def to_start(self, mouse):
