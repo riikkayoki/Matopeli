@@ -4,12 +4,12 @@ from entities.snake import Snake
 from entities.apple import Apple
 from ui.game_ui import GameUI
 from ui.form_ui import FormUI
-from ui.instructions_menu_ui import InstructionsUI
-from ui.leaderboard_menu_ui import LeaderboardMenuUI
-from ui.main_menu_ui import MainMenuUI
+from ui.instructions_menu_ui import InstructionsMenu
+from ui.leaderboard_menu_ui import LeaderboardMenu
+from ui.main_menu_ui import MainMenu
 from ui.renderer import Renderer
 from services.points import Points
-from services.gameboard import GameBoard
+from entities.gameboard import GameBoard
 from repositories.leaderboard_repository import LeaderBoardRepository
 from initialize_database import get_database_connection
 
@@ -22,9 +22,9 @@ class Game:
         self.points = Points()
         self.game = GameUI()
         self.game_board = GameBoard(22, 22, pygame.Rect(0, 0, 600, 600))
-        self.menu = MainMenuUI()
-        self.instructions = InstructionsUI()
-        self.leaderboard = LeaderboardMenuUI()
+        self.menu = MainMenu()
+        self.instructions = InstructionsMenu()
+        self.leaderboard = LeaderboardMenu()
         self.form = FormUI()
         self.database = LeaderBoardRepository(get_database_connection())
         self.display = Renderer(600, 600, (0, 0, 0))
@@ -43,7 +43,7 @@ class Game:
             self.game.draw_apple(self.apple)
             self.game.draw_snake(self.snake)
             self.game.draw_points(self.points.points)
-        
+    
     def events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -78,6 +78,7 @@ class Game:
                 else:
                     self.form.user_text += event.unicode
 
+        
     def update_points(self):
         if self.points.get_point(self.snake.position_snake_width,
                                  self.snake.position_snake_height,

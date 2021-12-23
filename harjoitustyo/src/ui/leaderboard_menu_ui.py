@@ -5,7 +5,7 @@ from ui.styling_ui import UIStyle
 from ui.renderer import Renderer
 
 
-class LeaderboardMenuUI:
+class LeaderboardMenu:
     def __init__(self):
 
         """Luokan konstruktori"""

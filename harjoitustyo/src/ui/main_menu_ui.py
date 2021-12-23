@@ -2,7 +2,7 @@ import pygame
 from ui.styling_ui import UIStyle
 from ui.renderer import Renderer
 
-class MainMenuUI:
+class MainMenu:
 
     '''Luokka, joka kuvaa päävalikon grafiikkaa.
     

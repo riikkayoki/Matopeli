@@ -18,6 +18,10 @@
 | 7.12.2021  | 8,0 h  | Main Menun koodamista. Debuggaus. Koodin hienosäätöä (pylint). Testausta.                                                                                                                         |
 | 9.12.2021  | 5 h    | Parantelin harjoitustyön rakennetta ja Main Menun tekemistä.                                                                                                                                      |
 | 14.12.2021 | 8,0 h  | Main Menun koodamista ja koodasin ehdot miten peli loppuu.                                                                                                                                        |
+| 19.12.2021 | 4,0 h  | Formin koodaamista, tietokannan suunnittelua ja opiskelua.                                                                                                                                        |
+| 21.12.2021 | 6,0 h  | Tietokannan koodaamista, docstringiä ja ui hienosäätöä.                                                                                                                                           |
+| 22.12.2021 | 4,0 h  | Testausta ja tiedostojen+metodien allokointia oikeisiin paikkoihin.                                                                                                                               |
+| 23.12.2021 | 4,0 h  | Testausta ja dokumentoinnin kirjoittamista. Docstringit valmiiksi.                                                                                                                                |
+| 25.12.2021 | 3,0 h  | Dokumenttien viimestely.                                                                                                                                                                          |
 
-
-Tuunnit yhteensä = 69 h
+Tuunnit yhteensä = 80 h

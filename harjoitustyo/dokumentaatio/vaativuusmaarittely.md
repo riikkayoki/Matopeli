@@ -22,52 +22,53 @@ Sovelluksen käyttöliittymä muodostuu neljästä erilaisesta komponentista:
 Painaessaan 'Start' -nappia, peli käynnistyy. 
 
 
-2. *Peliruudukko*: peliruudussa on näkyvissä itse peli, seuraava putoava pala sekä pisteet että taso. 
+2. *Käyttöohjevalikko*: Kun päävalikosta painetaan nappia 'INSTRUCTIONS', päädymme käyttöohjevalikkoon.
+Käyttöohjevalikosta voi katsoa pelin ohjeet. 
 
 
-3. *Onnittelut ja nimimerkin lisääminen*: Mikäli pelaaja oli pistemäärältään top 5 pelaajan joukossa, päätyy hän valikkoon, jossa häntä onnitellaan. 
-Tämän lisäksi hänen tulee syöttää nimimerkkinsä ruutuun ja lähettään tämän eteenpäin.
+3. *Tulostauluvalikko*: Kun päävalikosta painetaan nappia 'LEADERBOARD', päädymme käyttöohjevalikkoon.
+Tulostauluvalikosta voi katsoa pelin top10 parhaat pelaajat. 
 
 
-4. *Top 5 -näkymä*: Päädymme tähän 3. komponentin jälkeen tai mikäli käyttäjä ei ollut top 5 pelaajan joukossa.
-Tässä valikossa käyttäjä lisää ruutuun nimimerkkinsä ja lähettää sen eteenpäin.
-Tämän jälkeen käyttäjä päätyy top5 valikkoon, jossa näkyy hännen nimensä.
-Päädymme tämän valikon jälkeen taas päävalikkoon.
+4. *Peliruudukko*: peliruudussa on näkyvissä itse matopeli.
+
+
+5. *Onnittelut ja nimimerkin lisääminen*: Pelin loputtua, pelaaja päätyy valikkoon, jossa häntä onnitellaan. 
+Tämän lisäksi hänen tulee syöttää nimimerkkinsä ruutuun ja lähettää tämän eteenpäin painamalla 'enter' -nappia.
+
 
 ## Perusversion tarjoama toiminnallisuus
 ___________________________________
 
-* Päävalikko. **TEHTY**
-  * Start -nappi **TEHTY**
-  * Käyttöohjeet -nappi **TEHTY**
-
-
-* Pelialue 20x20. **TEHTY**
-  * Mato voi liikkua vain pelialueella.  **TEHTY**
-  * Jos mato osuu pelialueen reunaan, peli loppuu **TEHTY**
-
-
-* Pelissä on mato. **TEHTY**
-  * Madon pituus muodostuu aluksi yhdestä ruudusta. **TEHTY**
-  * Mato pitenee, kun se syö omenan. **TEHTY**
-  * Mato liikkuu kokoajan. **TEHTY**
-  * Matoa voi kääntää vasemmalle, oikealle, ylös tai alas. **TEHTY**
+* Päävalikko. 
+  * Start -nappi 
+  * Käyttöohjeet -nappi 
+  * Tulostaulukko -nappi
+  
+* Pelialue. 
+  * Mato voi liikkua vain pelialueella.  
+  * Jos mato osuu pelialueen reunaan, peli loppuu 
+  
+* Pelissä on mato. 
+  * Madon pituus muodostuu aluksi yhdestä ruudusta.
+  * Mato pitenee, kun se syö omenan. 
+  * Mato liikkuu kokoajan. 
+  * Matoa voi kääntää vasemmalle, oikealle, ylös tai alas. 
 
 
 * Pelissä on omena.
-  * Peliruudussa on yksi omena kerrallaan. **TEHTY**
-  * * Omena vaihtaa paikkaa, kun mato syö sen. **TEHTY**
+  * Peliruudussa on yksi omena kerrallaan. 
+    * Omena vaihtaa paikkaa, kun mato syö sen. 
 
 
 * Pelaaja kerää pisteitä syömällä omenoita.
-  * Pelaaja saa pisteen, kun syö omenan. **TEHTY**
-  * Kun pelaaja saa pisteen, piste tulee näkyviin kohtaan 'Points'. **TEHTY**
+  * Pelaaja saa pisteen, kun syö omenan. 
+  * Kun pelaaja saa pisteen, piste tulee näkyviin kohtaan 'Points'. 
   
 
-* Peli päättyy, jos mato osuu itseensä. **TEHTY**
-  * Jos pelaaja oli top5 pelaanjan joukossa pistemäärältään, hän lisää nimensä kenttään ja nimi näkyy leaderboardilla.
-  * Jos pelaaja ei ollut top5 pelaajan joukossa, hän näkee sijoituksensa pelissä.
-  * Näkymä ohjautuu taas päävalikkoon.
+* Peli päättyy, jos mato osuu itseensä tai pelialueen reunaan.
+  * Pelaaja syöttää nimimerkkinsä tekstinsyöttöruutuun.
+  * Syötettyään nimensä ja painettuaan 'enter' -nappia, pelaaja päätyy tulostaulunäkymään.
 
 
 ## Jatkokehitysideoita
@@ -75,8 +76,7 @@ ____________________________________________________
 
 Jos jää aikaa jäljelle niin sovellusta voi kehittää seuraavasti:
 
-* Pelaaja voi valita vaikeustason päävalikosta.
-* Päävalikkoon lisätään nappi, josta pääsee näkemään top 5 pelaajat ja heidän pisteet.
+* Pelissä on vaikeustasoja
 * Pelin voi laittaa tauolle.
-* Top 5 pelaajaa näkyy myös pelatessa peliä.
+* Top 10 pelaajaa näkyy myös pelatessa peliä.
 * Pelissä on ääniefektejä.

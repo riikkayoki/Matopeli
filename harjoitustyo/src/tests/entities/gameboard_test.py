@@ -1,5 +1,5 @@
 import unittest
-from services.gameboard import GameBoard
+from entities.gameboard import GameBoard
 
 class TestGameBoard(unittest.TestCase):
     def setUp(self):

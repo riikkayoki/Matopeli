@@ -2,7 +2,7 @@
 
 -----------------
 
-Voit ladata harjoitustyön lähdekoodin painamalla [tästä](https://github.com/riikkayoki/ot-harjoitustyo/releases).
+Voit ladata harjoitustyön lähdekoodin painamalla [tästä]().
 
 ## Ohjelman käynnistäminen
 
@@ -24,7 +24,21 @@ Käynnistä komennolla:
 
 ------
 
-Paina menusta hiirellä 'Start' -nappia ja peli alkaa. Käännä madon suuntaa nuolinäppäimillä ja pyri syömään omena. 
+Sovellus käyynistyy päävalikkonäkymään:
+
+Lue ensin pelin käyttöohjeet painamalla 'INSTRUCTIONS' -nappia tietokoneesi hiirellä. 
+Pääset takaisin päävalikkoon painamalla 'BACK TO MENU' -nappia tietokoneesi hiirellä:
+
+Katso top 10 pelaajien tuloksia painamalla 'LEADERBOARD' -nappia päävalikosta tietokoneesi hiirellä. 
+Pääset takaisin painamalla BACK TO MENU -nappia tietokoneesi hiirellä:
+
+Voit aloittaa pelin painamalla päävalikosta nappia 'START' tietokoneesi hiirellä. 
+Pelaa peliä 'INSTRUCTIONS' -valikossa olleiden käyttöohjeiden mukaisesti.
+
+Kun peli loppuu, paina tekstiruutua ja kirjoita nimimerkkisi siihen tietokoneesi näppäimillä. 
+Paina tämän jälkeen 'enter' -nappia. 
+Kun olet painanut 'enter' -nappia päädyt 'Leaderboard' -valikkoon. 
+Pääset takaisin päävalikkoon painamalla 'BACK TO MENU' -nappia tietokoneesi hiirellä.
 
 
 
