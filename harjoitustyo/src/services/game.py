@@ -18,6 +18,7 @@ from services.clock import Clock
 
 class Game:
     def __init__(self):
+        self.clock = pygame.time.Clock()
         self.snake = Snake(570, 570)
         self.apple = Apple(570, 570)
         self.points = Points()
@@ -39,7 +40,10 @@ class Game:
     def show_game(self):
         with self.display:
             self.snake.move()
-            self.update_points()
+            self.update_points(self.snake.position_snake_width, 
+                                self.snake.position_snake_height,
+                                self.apple.position_apple_width, 
+                                self.apple.position_apple_height)
             self.game_over()
             self.game.draw_game_board(self.game_board)
             self.game.draw_apple(self.apple)
@@ -81,11 +85,14 @@ class Game:
                     self.form.user_text += event.unicode
 
         
-    def update_points(self):
-        if self.points.get_point(self.snake.position_snake_width,
-                                 self.snake.position_snake_height,
-                                 self.apple.position_apple_width,
-                                 self.apple.position_apple_height):
+    def update_points(self, position_snake_width, 
+                                position_snake_height,
+                                position_apple_width, 
+                                position_apple_height):
+        if self.points.get_point(position_snake_width, 
+                                position_snake_height,
+                                position_apple_width, 
+                                position_apple_height):
             self.apple.new_random_position()
             self.snake.increase_snake_length()
             self.points.points += 1

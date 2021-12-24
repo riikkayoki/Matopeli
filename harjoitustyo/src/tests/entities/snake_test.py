@@ -22,12 +22,7 @@ class TestSnake(unittest.TestCase):
                         'RIGHT' or 'LEFT' or 'UP', 'DOWN')
 
     def test_border_collision(self):
-        self.assertTrue(True)
         self.assertEqual(self.snake.border_collision(), False)
-        self.assertEqual(self.snake.position_snake_width == 570, False)
-        self.assertEqual(self.snake.position_snake_width == 0, False)
-        self.assertEqual(self.snake.position_snake_height == 570, False)
-        self.assertEqual(self.snake.position_snake_height == 60, False)
 
     def test_increase_snake_length(self):
         self.assertEqual(self.snake.length, 0)

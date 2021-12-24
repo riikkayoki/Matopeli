@@ -1,20 +1,13 @@
 import unittest
 from repositories.leaderboard_repository import LeaderBoardRepository
-from initialize_database import fake_initialize_database, initialize_database
-from database_connection import fake_get_database_connection, get_database_connection
+from initialize_database import fake_initialize_database
+from database_connection import fake_get_database_connection
 
 
 class TestLeaderboardRepository(unittest.TestCase):
     def setUp(self):
         fake_initialize_database()
-        initialize_database()
         self.database = LeaderBoardRepository(fake_get_database_connection())
-        self.real_database = LeaderBoardRepository(get_database_connection())
-
-    def test_database(self):
-        self.real_database.create_new_highscore('test', 0)
-        top_real_10 = self.real_database.find_top10()
-        self.assertEqual(top_real_10, [('test', 0)])
 
     def test_create_new_user_and_find_top10(self):
         self.database.create_new_highscore('riikka', 12)
@@ -32,7 +25,4 @@ class TestLeaderboardRepository(unittest.TestCase):
         self.assertEqual(top10, [('riikka', 12), ('riksu', 10), ('erika', 9),
                                  ('hello', 8), ('thebest', 7), ('snake94', 6),
                                  ('gamer14', 5), ('riksuraksupoksu', 4), ('erkki92', 3), ('hobbit', 0)])
-    
-    def test_initialize(self):
-        initialize_database()
-        self.assertTrue(self.real_database)
+  
