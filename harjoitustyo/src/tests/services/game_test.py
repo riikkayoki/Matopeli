@@ -31,5 +31,6 @@ class TestGame(unittest.TestCase):
             self.assertFalse(self.game.start_game)
             self.assertTrue(self.game.stop_game)
             self.assertTrue(self.game.pause)
+
            
 

@@ -115,7 +115,6 @@ class Game:
         self.stop_game = False
         self.open_leaderboard = True
 
-
     def run(self):
         while True:
             if self.events() is False:
