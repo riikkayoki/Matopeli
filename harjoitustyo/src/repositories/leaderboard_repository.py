@@ -4,7 +4,7 @@ class LeaderBoardRepository:
     def __init__(self, connection):
 
         self._connection = connection
-    
+
     def find_top10(self):
 
         cursor = self._connection.cursor()
@@ -19,12 +19,6 @@ class LeaderBoardRepository:
     def create_new_highscore(self, username, points):
 
         cursor = self._connection.cursor()
-        cursor.execute("INSERT INTO Leaderboard (username, points) VALUES (?, ?);", [username, points])
+        cursor.execute("INSERT INTO Leaderboard (username, points) VALUES (?, ?);", [
+                       username, points])
         cursor.close()
-
-   
-  
-
-   
-
-   

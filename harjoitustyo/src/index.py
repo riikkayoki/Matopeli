@@ -1,10 +1,11 @@
 import pygame
-from game_loop import Game
+from services.game import Game
+
 
 def main():
     pygame.init()
     GAME = Game()
-    GAME.start()
+    GAME.run()
 
 if __name__ == '__main__':
     main()

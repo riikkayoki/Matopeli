@@ -11,32 +11,30 @@ class TestApple(unittest.TestCase):
         self.apple = Apple(570, 570)
 
     def test_random_positions(self):
-        self.assertTrue(self.apple.position_apple_width >=60 and self.apple.position_apple_width <= self.apple.width)
-        self.assertTrue(self.apple.position_apple_height >=60 and self.apple.position_apple_height <= self.apple.height)
-    
+        self.assertTrue(self.apple.position_apple_width >=
+                        60 and self.apple.position_apple_width <= self.apple.width)
+        self.assertTrue(self.apple.position_apple_height >=
+                        60 and self.apple.position_apple_height <= self.apple.height)
+
     def test_give_random_positions(self):
         position_apple_width = random.randint(60, self.apple.width)
         position_apple_height = random.randint(60, self.apple.height)
         self.assertTrue(self.apple.positions, [position_apple_width,
-                          position_apple_height])
+                                               position_apple_height])
 
     def test_random_apple_position(self):
         self.apple.new_random_position()
-        width = self.apple.position_apple_width >=60 and self.apple.position_apple_width <= self.apple.width
-        height = self.apple.position_apple_height >=60 and self.apple.position_apple_height <= self.apple.height
+        width = self.apple.position_apple_width >= 60 and self.apple.position_apple_width <= self.apple.width
+        height = self.apple.position_apple_height >= 60 and self.apple.position_apple_height <= self.apple.height
         self.assertTrue(width)
         self.assertTrue(height)
-        self.assertEqual(self.apple.positions, [self.apple.position_apple_width, self.apple.position_apple_height])
+        self.assertEqual(self.apple.positions, [
+                         self.apple.position_apple_width, self.apple.position_apple_height])
 
-    def test_reset(self):
-        self.apple.reset_apple()
-        self.assertEqual(self.apple.positions, [self.apple.position_apple_width, self.apple.position_apple_height])
-
-      
     def test_apple_position(self):
-        self.assertEqual(self.apple.positions, [[self.apple.position_apple_width, self.apple.position_apple_height]])
+        self.assertEqual(self.apple.positions, [
+                         [self.apple.position_apple_width, self.apple.position_apple_height]])
 
-    
     def test_width(self):
         self.assertEqual(self.apple.width, 570)
         self.apple.width = 600
@@ -46,8 +44,3 @@ class TestApple(unittest.TestCase):
         self.assertEqual(self.apple.height, 570)
         self.apple.height = 600
         self.assertEqual(self.apple.height, 600)
-
-    
-    
-
-    

@@ -1,3 +1,4 @@
+
 import sys
 import pygame
 from entities.snake import Snake
@@ -9,14 +10,14 @@ from ui.leaderboard_menu_ui import LeaderboardMenu
 from ui.main_menu_ui import MainMenu
 from ui.renderer import Renderer
 from services.points import Points
-from entities.gameboard import GameBoard
+from services.gameboard import GameBoard
 from repositories.leaderboard_repository import LeaderBoardRepository
 from initialize_database import get_database_connection
+from services.clock import Clock
 
 
 class Game:
     def __init__(self):
-        self.clock = pygame.time.Clock()
         self.snake = Snake(570, 570)
         self.apple = Apple(570, 570)
         self.points = Points()
@@ -28,13 +29,14 @@ class Game:
         self.form = FormUI()
         self.database = LeaderBoardRepository(get_database_connection())
         self.display = Renderer(600, 600, (0, 0, 0))
+        self.clock = Clock()
 
         self.start_game, self.stop_game, self.pause = False, False, False
         self.open_instructions, self.open_leaderboard = False, False
         self.go_back, self.enter = False, False
         self.writing = False
     
-    def run_game(self):
+    def show_game(self):
         with self.display:
             self.snake.move()
             self.update_points()
@@ -89,50 +91,45 @@ class Game:
             self.points.points += 1
 
     def game_over(self):
-        if self.snake.border_collision():
-            pygame.time.delay(500)
+        if self.snake.border_collision() or self.snake.snake_collision():
+            self.clock.tick(500)
             self.stop_game = True
             self.start_game = False
             self.pause = True
-        if self.snake.snake_collision():
-            pygame.time.delay(500)
-            self.stop_game = True
-            self.start_game = False
-            self.pause = True
-    
+      
     def reset_game(self):
         self.pause = False
         self.start_game = False
         self.database.create_new_highscore(self.form.user_text, 
                                                     self.points.points)
         self.snake.reset_snake()
-        self.apple.reset_apple()
+        self.apple.new_random_position()
         self.points.reset_points()
         self.stop_game = False
         self.open_leaderboard = True
 
 
-    def start(self):
+    def run(self):
         while True:
             if self.events() is False:
                 break
             elif self.start_game:
-                self.run_game()
-                self.game.draw_snake_speed(200)
+                self.show_game()
+                self.clock.tick(200)
             elif self.stop_game:
-                self.form.form()
+                self.form.show_form()
                 if self.enter:
                     self.reset_game()
             elif self.open_instructions:
-                self.instructions.run_instructions_menu()
+                self.instructions.show_instructions_menu()
                 if self.go_back:
                     self.open_instructions = False
             elif self.open_leaderboard:
-                self.leaderboard.run_leaderboard_menu()
+                self.leaderboard.show_leaderboard_menu()
                 if self.go_back:
                     self.open_leaderboard = False
             else:
-                self.menu.run_main_menu()
+                self.menu.show_main_menu()
 
             self.go_back = False
             self.enter = False

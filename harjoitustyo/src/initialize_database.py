@@ -6,6 +6,7 @@ def drop_table(connection):
     cursor.execute('''DROP TABLE IF EXISTS Leaderboard;''')
     connection.commit()
 
+
 def create_table(connection):
     '''Luo tietokantataulun.
     Args:
@@ -20,17 +21,20 @@ def create_table(connection):
 
     connection.commit()
 
+
 def initialize_database():
 
     connection = get_database_connection()
     drop_table(connection)
     create_table(connection)
 
+
 def fake_initialize_database():
-    
+
     connection = fake_get_database_connection()
     drop_table(connection)
     create_table(connection)
+
 
 if __name__ == '__main__':
     initialize_database()

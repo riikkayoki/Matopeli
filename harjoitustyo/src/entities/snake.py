@@ -1,10 +1,9 @@
 import random
 
-
 class Snake:
-  
+
     def __init__(self, width, height):
-     
+
         self.width = width
         self.height = height
         self.position_snake_width = random.randint(60, self.width)
@@ -28,13 +27,13 @@ class Snake:
 
     def increase_snake_length(self):
         for _ in range(30):
-            self.body.append([self.position_snake_width, self.position_snake_height])
+            self.body.append([self.position_snake_width,
+                             self.position_snake_height])
         self.length += 1
 
     def border_collision(self):
-        if self.position_snake_width == 570 or self.position_snake_width == 0:
-            return True
-        if self.position_snake_height == 570 or self.position_snake_height == 0:
+        if self.position_snake_width == 570 or self.position_snake_width == 0 or \
+            self.position_snake_height == 570 or self.position_snake_height == 0:
             return True
         return False
 

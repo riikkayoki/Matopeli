@@ -7,15 +7,13 @@ from ui.renderer import Renderer
 
 class LeaderboardMenu:
     def __init__(self):
-
         """Luokan konstruktori"""
 
         self.database = LeaderBoardRepository(get_database_connection())
         self.style = UIStyle()
         self.display = Renderer(600, 600, (0, 0, 0))
-        
-    def run_leaderboard_menu(self):
 
+    def show_leaderboard_menu(self):
         '''Päivittää graafista käyttöliittymää'''
 
         with self.display:
@@ -37,18 +35,17 @@ class LeaderboardMenu:
         for highscores in results:
             count += 1
             heigth += 35
-            self.style.text(20, f'{count}', self.style.grey, 
-                            (125, 105 + heigth)) 
-            self.style.text(20, f'{highscores[0]}', self.style.grey, 
+            self.style.text(20, f'{count}', self.style.grey,
+                            (125, 105 + heigth))
+            self.style.text(20, f'{highscores[0]}', self.style.grey,
                             (222, 105 + heigth))
-            self.style.text(20, f'{highscores[1]}', self.style.grey, 
+            self.style.text(20, f'{highscores[1]}', self.style.grey,
                             (455, 105 + heigth))
-    
-    def draw_back_button(self):
 
+    def draw_back_button(self):
         '''Piirtää BACK TO MENU -napin'''
 
-        self.style.button(self.style.grey, (426, 550, 155, 30), 
-                            self.style.white, 
-                            2, 20, 'BACK TO MENU', 
-                            self.style.black, (430, 553))
+        self.style.button(self.style.grey, (426, 550, 155, 30),
+                          self.style.white,
+                          2, 20, 'BACK TO MENU',
+                          self.style.black, (430, 553))
