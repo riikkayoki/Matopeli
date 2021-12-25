@@ -1,9 +1,8 @@
 # Ohjelmistotekniikka syksy 2021
 
----
 # Matopeli-sovellus
 
----
+
 
 Sovelluksen avulla käyttäjien on mahdollista pelata perinteistä Matopeliä.
 Sovellusta voi käyttää yksi pelaaja kerrallaan. 
@@ -15,19 +14,19 @@ Peli loppuu mikäli mato törmää seinään tai itseensä.
 
 ## Huomio Python-versiosta
 
----
+
 
 Sovelluksen toiminta on testattu Python 3.8.10 versiolla. 
 
 ## Lataa sovellus 
 
----
+
 
 [Valmiin sovelluksen release löytyy täältä.](https://github.com/riikkayoki/ot-harjoitustyo/releases)
 
 ## Dokumentatio
 
----
+
 
 * [Käyttöohje](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/kayttoohje.md)
 
@@ -61,7 +60,6 @@ poetry run invoke start
 
 ## Komentorivitoiminnot
 
----
 
 ### Ohjelman suorittaminen
 
