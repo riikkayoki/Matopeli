@@ -4,8 +4,9 @@ from services.game import Game
 
 def main():
     pygame.init()
-    GAME = Game()
-    GAME.run()
+    game = Game()
+    game.run()
+
 
 if __name__ == '__main__':
     main()

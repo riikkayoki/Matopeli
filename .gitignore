@@ -11,9 +11,13 @@ harjoitustyo/src/entities/apple.pyc
 harjoitustyo/src/services/__init__.pyc
 harjoitustyo/src/services/gameboard.pyc
 harjoitustyo/src/services/__pycache__
+harjoitustyo/src/services/points.pyc
+harjoitustyo/src/services/clock.pyv
+harjoitustyo/src/services/game.pyc
 
 harjoitustyo/src/repositories/leaderboard_repository.pyc
 harjoitustyo/src/repositories/__pycache__
+harjoitustyo/src/repositories/__init_.pyc
 
 
 harjoitustyo/src/tests/__init__.pyc

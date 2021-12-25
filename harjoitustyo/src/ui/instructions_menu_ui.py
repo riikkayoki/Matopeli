@@ -1,30 +1,30 @@
 from ui.styling_ui import UIStyle
-from ui.renderer import Renderer
+from services.renderer import Renderer
 
 
 class InstructionsMenu:
-
-    '''Luokka, joka kuvaa käyttöohje valikon grafiikkaa.
+    """A class that represents the instruction menu.
 
     Attributes:
-            self.style: Olio, jolla on UIStyle -luokkaa vastaavat metodit.
-            '''
+            self.display: an object that renders the screen.
+            self.style: an object that imports the styling features."""
 
     def __init__(self):
-        """Luokan konstruktori"""
+        """A constructor of the class that initializes the instructions userinterface."""
 
         self.display = Renderer(600, 600, (0, 0, 0))
         self.style = UIStyle()
 
     def show_instructions_menu(self):
-        '''Päivittää graafista käyttöliittymää'''
+        """A method that brings the objects to the display."""
 
         with self.display:
             self.draw_back_button()
             self.draw_instructions()
 
     def draw_instructions(self):
-        '''Piirtää käyttöohjeet'''
+        """A method to draw the instruction texts."""
+
         self.style.text(30, 'GAME INSTRUCTIONS', self.style.grey, (130, 25))
         self.style.text(23, '1. Eat the apples, but do not hit the walls or your own tail!',
                         self.style.grey, (20, 100))
@@ -42,7 +42,7 @@ class InstructionsMenu:
                         self.style.grey, (20, 400))
 
     def draw_back_button(self):
-        '''Piirtää BACK TO MENU -napin'''
+        """A method to draw the back to menu -button."""
 
         self.style.button(self.style.grey, (426, 550, 155, 30), self.style.white,
                           2, 20, 'BACK TO MENU',

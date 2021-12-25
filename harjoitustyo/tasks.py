@@ -16,6 +16,17 @@ def coverage(ctx):
 def coverage_report(ctx):
     ctx.run("coverage html")
 
+@task(coverage_report)
+def view_report(ctx):
+    ctx.run('firefox htmlcov/index.html')
+
 @task(coverage)
 def test(ctx):
     ctx.run("pytest src")
+
+@task
+def pep(ctx):
+    ctx.run('autopep8 --in-place --recursive src')
+
+
+

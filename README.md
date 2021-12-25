@@ -1,10 +1,7 @@
-# Ohjelmistotekniikka 2021
+# Ohjelmistotekniikka syksy 2021
 
 -----------------------
 # Matopeli-sovellus
-
--------------------------------
-[Paina tästä päästäksesi viimeisempään releaseen](https://github.com/riikkayoki/ot-harjoitustyo/releases)
 
 -------------------------------
 
@@ -15,31 +12,52 @@ Pelin tarkoituksena on ohjata matoa peliruudukossa ja syödä omenoita. Syömäl
 Omenoita ilmestyy satunnaisessa järjestyksessä peliruudukkoon yksi kerrallaan.
 Peli loppuu mikäli mato törmää seinään tai itseensä. 
 
+
 ## Huomio Python-versiosta
 
 -------------------------------
 
 Sovelluksen toiminta on testattu Python 3.8.10 versiolla. 
 
+##Lataa sovellus 
+
+-------------------------------
+
+[Valmiin sovelluksen release löytyy täältä.](https://github.com/riikkayoki/ot-harjoitustyo/releases)
+
 ## Dokumentatio
 
 -------------------------------
 
 * [Käyttöohje](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/kayttoohje.md)
+
+
 * [Vaatimusmäärittely](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/vaativuusmaarittely.md)
+
+
 * [Arkkitehtuurikuvaus](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/arkkitehtuuri.md)
+
+
 * [Testausdokumentti](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/testaus.md)
+
+
 * [Työaikakirjanpito](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/tyoaikakirjanpito.md)
 
 ## Asennus
 
 -------------------------------
 
-1. Asenna riippuvuudet komennolla: `poetry install`
+1. Asenna riippuvuudet komennolla:
 
+```
+ poetry install
+```
 
-2. Käynnistä sovellus komennolla: `poetry run invoke start`
+2. Käynnistä sovellus komennolla: 
 
+```
+poetry run invoke start
+```
 
 ## Komentorivitoiminnot
 
@@ -47,23 +65,43 @@ Sovelluksen toiminta on testattu Python 3.8.10 versiolla.
 
 ### Ohjelman suorittaminen
 
-Ohjelman pystyy suorittamaan komennolla: `poetry run invoke start`
+Ohjelman pystyy suorittamaan komennolla: 
 
+```
+poetry run invoke start
+```
 
 ### Testaus
 
-Ohjelman testit pystyy testaamaan komennolla: `poetry run invoke test`
+Ohjelman testit pystyy testaamaan komennolla: 
+
+```
+poetry run invoke test
+```
 
 
 ### Testikattavuus
 
-Ohjelman testikattavuuden pystyy generoimaan komennolla: `poetry run invoke coverage-report`
+Ohjelman testikattavuuden pystyy generoimaan komennolla: 
+
+```
+poetry run invoke coverage-report
+```
+
+Testauskattavuuden raportin saa avattua Firefox -selaimessa komennolla:
+
+```
+poetry run invoke view-report
+```
 
 ### Pylint
 
-Tiedoston .pylintrc määrittelemät tarkistukset voi suorittaa komennolla:
+Tiedoston [.pylintrc](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/.pylintrc) 
+määrittelemien tarkistukset voi suorittaa komennolla:
 
-`poetry run invoke lint`
+```
+poetry run invoke lint
+```
 
 
 

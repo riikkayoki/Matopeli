@@ -25,4 +25,3 @@ class TestLeaderboardRepository(unittest.TestCase):
         self.assertEqual(top10, [('riikka', 12), ('riksu', 10), ('erika', 9),
                                  ('hello', 8), ('thebest', 7), ('snake94', 6),
                                  ('gamer14', 5), ('riksuraksupoksu', 4), ('erkki92', 3), ('hobbit', 0)])
-  
