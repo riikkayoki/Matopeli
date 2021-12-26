@@ -1,37 +1,38 @@
-./.pytest_cache
-./src/.pytest_cache
-./src/__pycache__
-./src/initialize_database.pyc
-./src/database_connection.pyc
+harjoitustyo/.pytest_cache
+harjoitustyo/src/.pytest_cache
+harjoitustyo/src/__pycache__
+harjoitustyo/src/initialize_database.pyc
+harjoitustyo/src/database_connection.pyc
 
-./src/entities/__init__.pyc
-./src/entities/snake.pyc
-./src/entities/apple.pyc
+harjoitustyo/src/entities/__init__.pyc
+harjoitustyo/src/entities/snake.pyc
+harjoitustyo/src/entities/apple.pyc
 
-./src/services/__init__.pyc
-./src/services/gameboard.pyc
-./src/services/__pycache__
-./src/services/points.pyc
-./src/services/clock.pyv
-./src/services/game.pyc
+harjoitustyo/src/services/__init__.pyc
+harjoitustyo/src/services/gameboard.pyc
+harjoitustyo/src/services/__pycache__
+harjoitustyo/src/services/points.pyc
+harjoitustyo/src/services/clock.pyv
+harjoitustyo/src/services/game.pyc
 
-./src/repositories/leaderboard_repository.pyc
-./src/repositories/__pycache__
-./src/repositories/__init_.pyc
+harjoitustyo/src/repositories/leaderboard_repository.pyc
+harjoitustyo/src/repositories/__pycache__
+harjoitustyo/src/repositories/__init_.pyc
 
 
-./src/tests/__init__.pyc
-./src/tests/__pycache__
-./src/tests/entities/__init__.pyc
-./src/tests/entities/__pycache__
-./src/tests/repositories/__pycache__
-./src/tests/repositories/__init_.pyc
-./src/tests/repositories/.hypothesis
-./src/tests/repositories/.pytest_cache
-./src/tests/services/__init__.pyc
-./src/tests/services/__pycache__
+harjoitustyo/src/tests/__init__.pyc
+harjoitustyo/src/tests/__pycache__
+harjoitustyo/src/tests/entities/__init__.pyc
+harjoitustyo/src/tests/entities/__pycache__
+harjoitustyo/src/tests/repositories/__pycache__
+harjoitustyo/src/tests/repositories/__init_.pyc
+harjoitustyo/src/tests/repositories/.hypothesis
+harjoitustyo/src/tests/repositories/.pytest_cache
+harjoitustyo/src/tests/services/__init__.pyc
+harjoitustyo/src/tests/services/__pycache__
 
-./src/ui/__pycache__
+
+harjoitustyo/src/ui/__pycache__
 
 laskarit/viikko2/maksukortti/.pytest_cache
 laskarit/viikko2/maksukortti/src/.pytest_cache
@@ -42,6 +43,7 @@ laskarit/viikko2/maksukortti/src/tests/.pytest_cache
 htmlcov
 __pycache__
 .coverage
+.pylintrc
 .pytest_cache
 .idea
 laskarit/.idea
