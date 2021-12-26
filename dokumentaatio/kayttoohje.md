@@ -1,10 +1,7 @@
 # Käyttöohje
 
-<<<<<<< HEAD
+
 Voit ladata harjoitustyön lähdekoodin [täältä](https://github.com/riikkayoki/ot-harjoitustyo/releases/tag/finalproject).
-=======
-Voit ladata harjoitustyön lähdekoodin [täältä](https://github.com/riikkayoki/ot-harjoitustyo/releases/tag/lopullinenpalautus).
->>>>>>> fd8bc07546a353a51555ee3bd528bcc4c30849e8
 
 ## Ohjelman käynnistäminen
 
