@@ -6,15 +6,21 @@ Voit ladata harjoitustyön lähdekoodin painamalla [tästä]().
 
 Asenna riippuvuudet komennolla:
 
-`poetry install`
+```
+poetry install
+```
 
 Suorita alustustoimenpiteet komennolla:
 
-`poetry run invoke build`
+```
+poetry run invoke build
+```
 
 Käynnistä komennolla:
 
-`poetry run invoke start`
+```
+poetry run invoke start
+```
 
 ## Pelin aloittaminen
 
