@@ -3,7 +3,7 @@
 
 ## Rakenne
 
-![rakenne](/home/salojoki/ot-harjoitustyo/dokumentaatio/pictures/structure.png)
+![rakenne](ot-harjoitustyo/dokumentaatio/pictures/structure.png)
 
 ## Käyttöliittymä
 
