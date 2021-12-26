@@ -51,15 +51,17 @@ Löydät testaustiedoston [täältä](https://github.com/riikkayoki/ot-harjoitus
 ### Repositorio -luokka
 
 Tietojen pysyväistallennuksesta vastaava `LeaderboardRepository` -luokka on testattu `TestLeaderboardRepository` -luokassa. 
-Tässä luokassa on testattu myös tiedostot 
+Tässä luokassa on testattu myös tiedostoja
 [database_connetion.py](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/src/database_connection.py) 
-ja [initialize_database.py](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/src/initialize_database.py)
+ja [initialize_database.py](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/src/initialize_database.py).
+Tietokantojen alustamiseen liittyviä tiedostoja initizalie_database.py ja [build.py](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/src/build.py) tiedostoa on testattu [conftest.py](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/src/tests/conftest.py) tiedostossa. 
 
 
-Löydät testaustiedoston [täältä](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/src/tests/repositories/leaderboard_repository_test.py).
+Löydät `TestLeaderboardRepository` testaustiedoston [täältä](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/src/tests/repositories/leaderboard_repository_test.py).
 
 - Testaa tekaistulla tietokannalla (vastaa oikeaa tietokantaa), 
 että tietokannasa voidaan sekä hakea tietoja että sinne voidaan lisätä tietoja.
+- Testaa tietokannan alustusta.
 
 
 ### Testauskattavuus
