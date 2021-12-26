@@ -1,10 +1,10 @@
 import pygame
-from services.game import Game
+from services.game import SnakeGame
 
 
 def main():
     pygame.init()
-    game = Game()
+    game = SnakeGame()
     game.run()
 
 

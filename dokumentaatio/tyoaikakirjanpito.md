@@ -22,6 +22,7 @@
 | 21.12.2021 | 6,0 h  | Tietokannan koodaamista, docstringiä ja ui hienosäätöä.                                                                                                                                           |
 | 22.12.2021 | 4,0 h  | Testausta ja tiedostojen+metodien allokointia oikeisiin paikkoihin.                                                                                                                               |
 | 23.12.2021 | 4,0 h  | Testausta ja dokumentoinnin kirjoittamista. Docstringit valmiiksi.                                                                                                                                |
-| 25.12.2021 | 3,0 h  | Dokumenttien viimestely.                                                                                                                                                                          |
+| 25.12.2021 | 4,0 h  | Dokumenttien, koodin ja testauksen viimestely. Pylintin tarkastus.                                                                                                                                |
 
-Tuunnit yhteensä = 80 h
+
+Tuunnit yhteensä = 81 h

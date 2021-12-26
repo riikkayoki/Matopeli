@@ -45,19 +45,23 @@ ___________________________________
   * Käyttöohjeet -nappi 
   * Tulostaulukko -nappi
   
+
 * Pelialue. 
   * Mato voi liikkua vain pelialueella.  
   * Jos mato osuu pelialueen reunaan, peli loppuu 
   
+
 * Pelissä on mato. 
   * Madon pituus muodostuu aluksi yhdestä ruudusta.
   * Mato pitenee, kun se syö omenan. 
   * Mato liikkuu kokoajan. 
-  * Matoa voi kääntää vasemmalle, oikealle, ylös tai alas. 
+  * Matoa voi kääntää aina vasemmalle, oikealle, ylös tai alas.
 
 
 * Pelissä on omena.
-  * Peliruudussa on yksi omena kerrallaan. 
+  * Peliruudussa on yksi omena kerrallaan.
+    * Omena sijoittuu satunnaiseen paikkaan peliruudussa. 
+Se voi myös sijoittua kohtaan, jossa mato on.
     * Omena vaihtaa paikkaa, kun mato syö sen. 
 
 
@@ -76,7 +80,7 @@ ____________________________________________________
 
 Jos jää aikaa jäljelle niin sovellusta voi kehittää seuraavasti:
 
-* Pelissä on vaikeustasoja
+* Pelissä on vaikeustasoja.
 * Pelin voi laittaa tauolle.
-* Top 10 pelaajaa näkyy myös pelatessa peliä.
+* Top 10 pelaajaa näkyy myös peliä pelatessa.
 * Pelissä on ääniefektejä.

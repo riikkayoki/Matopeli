@@ -15,7 +15,7 @@ from repositories.leaderboard_repository import LeaderBoardRepository
 from initialize_database import get_database_connection
 
 
-class Game:
+class SnakeGame:
     """A class that represents the game loop that runs the game.
 
     Attributes:
@@ -148,10 +148,12 @@ class Game:
         self.apple.new_random_position()
         self.points.reset_points()
         self._stop_game = False
-        self.open_leaderboard = True
+        self.open_leaderboard = False
 
     def run(self):
         """A method to run the game loop."""
+        
+        pygame.display.set_caption(f'SNAKE GAME')
 
         while True:
             if self.events() is False:

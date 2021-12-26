@@ -1,18 +1,17 @@
 import unittest
-from services.game import Game
+from services.game import SnakeGame
 from services.points import Points
 from entities.snake import Snake
 from entities.apple import Apple
 from services.points import Points
 
 
-class TestGame(unittest.TestCase):
+class TestSnakeGame(unittest.TestCase):
     def setUp(self):
-        self.game = Game()
+        self.game = SnakeGame()
         self.points = Points()
         self.snake = Snake(570, 570)
         self.apple = Apple(570, 570)
-        self.points = Points()
 
     def test_update_points(self):
         self.game.update_points(10, 10, 10, 10)
@@ -23,6 +22,7 @@ class TestGame(unittest.TestCase):
         self.assertEqual(get, False)
 
     def test_gameover(self):
+        self.game.game_over(10, 10, [[10, 10]])
         self.assertEqual(self.game._pause, False)
         self.assertEqual(self.game._start_game, False)
         self.assertEqual(self.game._stop_game, False)
@@ -40,7 +40,7 @@ class TestGame(unittest.TestCase):
         self.game.reset()
         self.assertEqual(self.game._pause, False)
         self.assertEqual(self.game._start_game, False)
-        self.assertEqual(self.game.open_leaderboard, True)
+        self.assertEqual(self.game.open_leaderboard, False)
         self.assertEqual(self.points.points, 0)
         self.assertEqual(self.game._stop_game, False)
-        self.assertEqual(self.game.open_leaderboard, True)
+

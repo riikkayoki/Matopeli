@@ -34,10 +34,7 @@ class TestSnake(unittest.TestCase):
         self.assertEqual(self.snake.border_collision(10, 570), True)
 
     def test_snake_collision(self):
-        if self.snake.snake_collision(self.snake.body):
-            self.assertEqual(self.snake.body[0] in self.snake.body[60:], True)
-        else:
-            self.assertEqual(self.snake.body[0] in self.snake.body[60:], False)
+        self.assertEqual(self.snake.body[0] in self.snake.body[60:], False)
 
     def test_reset_snake(self):
         self.snake.reset_snake()

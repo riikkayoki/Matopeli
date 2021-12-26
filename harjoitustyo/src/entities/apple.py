@@ -28,7 +28,7 @@ class Apple:
 
     def new_random_position(self):
         """A method that creates random position for the apple."""
-
+        
         self.position_apple_width = random.randint(60, self.width)
         self.position_apple_height = random.randint(60, self.height)
         self.positions = [self.position_apple_width,

@@ -1,12 +1,9 @@
 import unittest
 from entities.apple import Apple
-from random import Random
 
 
 class TestApple(unittest.TestCase):
     def setUp(self):
-        global random
-
         self.apple = Apple(570, 570)
 
     def test_apple_positions(self):
