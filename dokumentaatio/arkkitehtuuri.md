@@ -78,7 +78,7 @@ Kun päävalikossa painetaan nappia `LEADERBOARD`, sovelluksen toiminta etenee s
 Painaessa`LEADERBOARD` -nappia ohjelma havaisee, että `self.open_leaderboard` -olio on saanut arvokseen True.
 SnakeGame -luokka kutsuu tällöin `show_leaderboard()` -metodia luokasta `LeaderboardMenu`, 
 mikä löytyy tiedostosta [leaderboard_menu_ui.py](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/src/ui/leaderboard_menu_ui.py).
-LeaderboardMenu hakee ja näyttää tiedot kymmenestä parhaasta pelaajasta `LeaderboardRepository` -luokasta, mikä löytyy tiedostosta [leaderboard_repository.py]().
+LeaderboardMenu hakee ja näyttää tiedot kymmenestä parhaasta pelaajasta `LeaderboardRepository` -luokasta, mikä löytyy tiedostosta [leaderboard_repository.py](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/src/repositories/leaderboard_repository.py).
 Päävalikkoon päästään takaisin, kun painetaan `BACK TO MENU` -nappia.
 
 ### Pelin pelaaminen ja nimimerkin luominen
