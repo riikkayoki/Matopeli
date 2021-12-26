@@ -20,7 +20,11 @@ Sovelluksen toiminta on testattu Python 3.8.10 versiolla.
 
 ## Lataa sovellus 
 
+<<<<<<< HEAD
 Valmiin sovelluksen release löytyy [täältä](https://github.com/riikkayoki/ot-harjoitustyo/releases/tag/finalproject).
+=======
+Valmiin sovelluksen release löytyy [täältä](https://github.com/riikkayoki/ot-harjoitustyo/releases/tag/lopullinenpalautus).
+>>>>>>> fd8bc07546a353a51555ee3bd528bcc4c30849e8
 
 ## Dokumentatio
 
