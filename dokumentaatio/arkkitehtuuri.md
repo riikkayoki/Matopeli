@@ -3,7 +3,7 @@
 
 ## Rakenne
 
-![rakenne](ot-harjoitustyo/dokumentaatio/pictures/structure.png)
+![rakenne](./pictures/structure.png)
 
 ## Käyttöliittymä
 
