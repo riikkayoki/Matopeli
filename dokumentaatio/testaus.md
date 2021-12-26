@@ -64,7 +64,7 @@ että tietokannasa voidaan sekä hakea tietoja että sinne voidaan lisätä tiet
 
 ### Testauskattavuus
 
-Testauksen haarautumiskattavuus on 59%.
+Testauksen haarautumiskattavuus on 61%.
 
 ![coverage report](./pictures/coverage_report.png)
 
@@ -89,7 +89,7 @@ Sovellusta on testattu eri tietokantojen nimillä sekä erilaisilla syötteillä
 
 ## Sovellukseen jääneet laatuongelmat
 
-Luokan `SnakeGame `ongelmallisesta rakenteesta johtuen testauksen haarautumiskattavuus laskee 94:stä prosentista 59 -prosenttiin.
+Luokan `SnakeGame `ongelmallisesta rakenteesta johtuen testauksen haarautumiskattavuus laskee 94:stä prosentista 61 -prosenttiin.
 
 
 
