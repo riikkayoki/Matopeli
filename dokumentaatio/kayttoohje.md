@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Voit ladata harjoitustyön lähdekoodin [täältä](https://github.com/riikkayoki/ot-harjoitustyo/releases/tag/1.0.0).
+Voit ladata harjoitustyön lähdekoodin [täältä](https://github.com/riikkayoki/ot-harjoitustyo/releases/tag/finalproject).
 
 ## Ohjelman käynnistäminen
 
