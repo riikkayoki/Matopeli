@@ -21,30 +21,27 @@ Sovelluksen toiminta on testattu Python 3.8.10 versiolla.
 ## Lataa sovellus 
 
 
-
 [Valmiin sovelluksen release löytyy täältä.](https://github.com/riikkayoki/ot-harjoitustyo/releases)
 
 ## Dokumentatio
 
 
-
-* [Käyttöohje](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/kayttoohje.md)
-
-
-* [Vaatimusmäärittely](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/vaativuusmaarittely.md)
+* [Käyttöohje](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 
-* [Arkkitehtuurikuvaus](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/arkkitehtuuri.md)
+* [Vaatimusmäärittely](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/dokumentaatio/vaativuusmaarittely.md)
 
 
-* [Testausdokumentti](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/testaus.md)
+* [Arkkitehtuurikuvaus](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 
-* [Työaikakirjanpito](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/dokumentaatio/tyoaikakirjanpito.md)
+* [Testausdokumentti](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
+
+
+* [Työaikakirjanpito](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 ## Asennus
 
----
 
 1. Asenna riippuvuudet komennolla:
 

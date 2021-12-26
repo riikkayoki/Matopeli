@@ -3,7 +3,7 @@
 
 ## Rakenne
 
-![rakenne](/home/salojoki/ot-harjoitustyo/dokumentaatio/pictures/structure.png)
+![rakenne](./pictures/structure.png)
 
 ## Käyttöliittymä
 
@@ -62,7 +62,7 @@ tiedostossa.
 
 Kun päävalikossa painetaan nappia `INSTRUCTIONS`, sovelluksen toiminta etenee seuraavanlaisesti:
 
-![instructions_arch](/home/salojoki/ot-harjoitustyo/dokumentaatio/pictures/instructions_architecture.png)
+![instructions_arch](./pictures/instructions_architecture.png)
 
 Painaessa `INSTRUCTIONS` -nappia ohjelma havaitsee, että `self.open_instructions`-olio on saanut arvon True.
 SnakeGame -luokka kutsuu tällöin `show_instructions()` -metodia luokasta `InstructionsMenu`, 
@@ -73,7 +73,7 @@ Päävalikkoon päästään takaisin, kun painetaan `BACK TO MENU` -nappia.
 
 Kun päävalikossa painetaan nappia `LEADERBOARD`, sovelluksen toiminta etenee seuraavanlaisesti:
 
-![leaderboard_arch](/home/salojoki/ot-harjoitustyo/dokumentaatio/pictures/leaderboard_architecture.png)
+![leaderboard_arch](./pictures/leaderboard_architecture.png)
 
 Painaessa`LEADERBOARD` -nappia ohjelma havaisee, että `self.open_leaderboard` -olio on saanut arvokseen True.
 SnakeGame -luokka kutsuu tällöin `show_leaderboard()` -metodia luokasta `LeaderboardMenu`, 
@@ -85,7 +85,8 @@ Päävalikkoon päästään takaisin, kun painetaan `BACK TO MENU` -nappia.
 
 Kun päävalikossa painetaan nappia `START`, sovelluksen toiminta etenee seuraavanlaisesti:
 
-![game_arch](/home/salojoki/ot-harjoitustyo/dokumentaatio/pictures/game_architecture.png)
+![game_arch](./pictures/game_architecture.png)
+
 
 Painaessa`START` -nappia, ohjelma havaitsee, että `self._start_game` on saanut arvokseen True.
 SnakeGame -luokka kutsuu tällöin metodia `run_game()`. 

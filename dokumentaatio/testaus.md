@@ -66,7 +66,7 @@ että tietokannasa voidaan sekä hakea tietoja että sinne voidaan lisätä tiet
 
 Testauksen haarautumiskattavuus on 59%.
 
-![coverage report](/home/salojoki/ot-harjoitustyo/dokumentaatio/pictures/coverage_report.png)
+![coverage report](./pictures/coverage_report.png)
 
 Testauksen ulkopuolelle on jätetty ui -hakemiston tiedostot sekä service hakemistossa löytyvä renderer.py ja clock.py, 
 koska nämä pyörittävät ainoastaan pygame tapahtumia. 
@@ -78,12 +78,12 @@ Sovelluksen järjestelmätestaus on suoritettu manuaalisesti.
 
 ### Asennus ja konfigurointi
 
-Sovellus on haettu ja sitä on testattu [käyttöohjeen]() kuvaamalla tavalla Linux-ympäristössä.
+Sovellus on haettu ja sitä on testattu [käyttöohjeen](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md) kuvaamalla tavalla Linux-ympäristössä.
 
 
 ### Toiminnallisuudet
 
-Kaikki [määrittelydokumentin]() ja käyttöohjeen listaamat toiminnallisuudet on käyty läpi. 
+Kaikki [vaatimusmäärittelydokumentin](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/dokumentaatio/vaativuusmaarittely.md) ja käyttöohjeen listaamat toiminnallisuudet on käyty läpi. 
 Sovellusta on testattu eri tietokantojen nimillä sekä erilaisilla syötteillä näppäimistön ja hiiren avulla ohjelman ollessa käynnissä.
 
 

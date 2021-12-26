@@ -20,24 +20,24 @@ Käynnistä komennolla:
 
 Sovellus käyynistyy päävalikkonäkymään:
 
-![mainmenu](/home/salojoki/ot-harjoitustyo/dokumentaatio/pictures/mainmenu_instructions.png)
+![mainmenu](.pictures/mainmenu_instructions.png)
 
 Lue ensin pelin käyttöohjeet painamalla 'INSTRUCTIONS' -nappia tietokoneesi hiirellä.
 Pääset takaisin päävalikkoon painamalla 'BACK TO MENU' -nappia tietokoneesi hiirellä:
 
-![instructions](/home/salojoki/ot-harjoitustyo/dokumentaatio/pictures/instructions_instructions.png)
+![instructions](./pictures/instructions_instructions.png)
 
 Katso top 10 pelaajien tuloksia painamalla 'LEADERBOARD' -nappia päävalikosta tietokoneesi hiirellä. 
 Pääset takaisin painamalla BACK TO MENU -nappia tietokoneesi hiirellä:
 
-![leaderboard](/home/salojoki/ot-harjoitustyo/dokumentaatio/pictures/leaderboard_instructions.png)
+![leaderboard](./pictures/leaderboard_instructions.png)
 
 Voit aloittaa pelin painamalla päävalikosta nappia 'START' tietokoneesi hiirellä. 
 Pelaa peliä 'INSTRUCTIONS' -valikossa olleiden käyttöohjeiden mukaisesti.
 
-![game](/home/salojoki/ot-harjoitustyo/dokumentaatio/pictures/game_instructions.png)
+![game](./pictures/game_instructions.png)
 
 Kun peli loppuu, paina tekstiruutua ja kirjoita nimimerkkisi siihen tietokoneesi näppäimillä. 
 Paina tämän jälkeen 'enter' -nappia, jotta pääset takaisin päävalikkoon. 
 
-![form](/home/salojoki/ot-harjoitustyo/dokumentaatio/pictures/form_instructions.png)
+![form](./pictures/form_instructions.png)

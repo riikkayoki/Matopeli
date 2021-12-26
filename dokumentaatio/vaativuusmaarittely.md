@@ -1,19 +1,14 @@
-# Vaatimusmäärittely 
-_____________________
+# Vaatimusmäärittely
 
 ## Sovelluksen tarkoitus
-
---------------------------------------
 
 Sovellus on versio perinteisestä Matopelistä. 
 
 ## Käyttäjät
-_______________________________________________________
 
 Tässä sovelluksessa on vain yhden tyyppisiä käyttäjiä eli pelaajia.
 
 ## Käyttöliittymä luonnos
-________________________________
 
 
 Sovelluksen käyttöliittymä muodostuu neljästä erilaisesta komponentista:
@@ -38,7 +33,6 @@ Tämän lisäksi hänen tulee syöttää nimimerkkinsä ruutuun ja lähettää t
 
 
 ## Perusversion tarjoama toiminnallisuus
-___________________________________
 
 * Päävalikko. 
   * Start -nappi 
@@ -76,7 +70,6 @@ Se voi myös sijoittua kohtaan, jossa mato on.
 
 
 ## Jatkokehitysideoita
-____________________________________________________
 
 Jos jää aikaa jäljelle niin sovellusta voi kehittää seuraavasti:
 
