@@ -42,7 +42,6 @@ laskarit/viikko2/maksukortti/src/tests/.pytest_cache
 htmlcov
 __pycache__
 .coverage
-.pylintrc
 .pytest_cache
 .idea
 laskarit/.idea

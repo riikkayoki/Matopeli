@@ -91,7 +91,7 @@ poetry run invoke view-report
 
 ### Pylint
 
-Tiedoston [.pylintrc](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/harjoitustyo/.pylintrc) 
+Tiedoston [.pylintrc](https://github.com/riikkayoki/ot-harjoitustyo/snakegame/.pylintrc) 
 määrittelemien tarkistukset voi suorittaa komennolla:
 
 ```
