@@ -1,5 +1,5 @@
 import unittest
-from services.game import SnakeGame
+from services.snakegame import SnakeGame
 from services.points import Points
 from entities.snake import Snake
 from entities.apple import Apple

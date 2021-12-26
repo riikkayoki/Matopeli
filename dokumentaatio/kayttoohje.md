@@ -20,7 +20,7 @@ Käynnistä komennolla:
 
 Sovellus käyynistyy päävalikkonäkymään:
 
-![mainmenu](.pictures/mainmenu_instructions.png)
+![mainmenu](./pictures/mainmenu_instructions.png)
 
 Lue ensin pelin käyttöohjeet painamalla 'INSTRUCTIONS' -nappia tietokoneesi hiirellä.
 Pääset takaisin päävalikkoon painamalla 'BACK TO MENU' -nappia tietokoneesi hiirellä:

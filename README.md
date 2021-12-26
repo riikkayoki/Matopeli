@@ -42,17 +42,17 @@ Valmiin sovelluksen release löytyy [täältä](https://github.com/riikkayoki/ot
 ## Asennus
 
 
-1. Asenna riippuvuudet komennolla:
+Asenna riippuvuudet komennolla:
 
-```
- poetry install
-```
+`poetry install`
 
-2. Käynnistä sovellus komennolla: 
+Suorita alustustoimenpiteet komennolla:
 
-```
-poetry run invoke start
-```
+`poetry run invoke build`
+
+Käynnistä komennolla:
+
+`poetry run invoke start`
 
 ## Komentorivitoiminnot
 

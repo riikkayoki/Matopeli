@@ -1,5 +1,5 @@
 import pygame
-from services.game import SnakeGame
+from services.snakegame import SnakeGame
 
 
 def main():
