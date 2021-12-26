@@ -20,8 +20,7 @@ Sovelluksen toiminta on testattu Python 3.8.10 versiolla.
 
 ## Lataa sovellus 
 
-
-[Valmiin sovelluksen release löytyy täältä.](https://github.com/riikkayoki/ot-harjoitustyo/releases)
+Valmiin sovelluksen release löytyy [täältä](https://github.com/riikkayoki/ot-harjoitustyo/releases).
 
 ## Dokumentatio
 
@@ -91,7 +90,7 @@ poetry run invoke view-report
 
 ### Pylint
 
-Tiedoston [.pylintrc](https://github.com/riikkayoki/ot-harjoitustyo/snakegame/.pylintrc) 
+Tiedoston [.pylintrc](https://github.com/riikkayoki/ot-harjoitustyo/tree/master/snakegame) 
 määrittelemien tarkistukset voi suorittaa komennolla:
 
 ```
