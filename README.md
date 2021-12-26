@@ -20,7 +20,7 @@ Sovelluksen toiminta on testattu Python 3.8.10 versiolla.
 
 ## Lataa sovellus 
 
-Valmiin sovelluksen release löytyy [täältä](https://github.com/riikkayoki/ot-harjoitustyo/releases).
+Valmiin sovelluksen release löytyy [täältä](https://github.com/riikkayoki/ot-harjoitustyo/releases/tag/1.0.0).
 
 ## Dokumentatio
 
