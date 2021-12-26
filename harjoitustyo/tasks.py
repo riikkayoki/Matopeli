@@ -20,7 +20,7 @@ def coverage_report(ctx):
 def view_report(ctx):
     ctx.run('firefox htmlcov/index.html')
 
-@task(coverage)
+@task
 def test(ctx):
     ctx.run("pytest src")
 
