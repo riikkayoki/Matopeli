@@ -89,7 +89,7 @@ Sovellusta on testattu eri tietokantojen nimillä sekä erilaisilla syötteillä
 
 ## Sovellukseen jääneet laatuongelmat
 
-Luokan `SnakeGame `ongelmallisesta rakenteesta johtuen testauksen haarautumiskattavuus laskee 94:stä prosentista 61 -prosenttiin.
+Luokan `SnakeGame `ongelmallisesta rakenteesta johtuen testauksen haarautumiskattavuus laskee 95:stä prosentista 61 -prosenttiin.
 
 
 
