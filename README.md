@@ -11,10 +11,21 @@ Pelin tarkoituksena on ohjata matoa peliruudukossa ja syödä omenoita. Syömäl
 Omenoita ilmestyy satunnaisessa järjestyksessä peliruudukkoon yksi kerrallaan.
 Peli loppuu mikäli mato törmää seinään tai itseensä. 
 
+Main Menu             |  Gaming window
+:-------------------------:|:-------------------------:
+![mainmenu](./dokumentaatio//pictures/mainmenu_instructions.png)  | ![game](./dokumentaatio/pictures/game_instructions.png)
+
+Form for entering a nickname  |  Leaderboard
+:-------------------------:|:-------------------------:
+![form](./dokumentaatio/pictures/form_instructions.png) | ![game](./dokumentaatio/pictures/leaderboard_instructions.png)
+
+Instructions             |  
+:-------------------------:|
+![instructions](./dokumentaatio/pictures/instructions_instructions.png) 
+
+
 
 ## Huomio Python-versiosta
-
-
 
 Sovelluksen toiminta on testattu Python 3.8.10 versiolla. 
 
@@ -23,7 +34,7 @@ Sovelluksen toiminta on testattu Python 3.8.10 versiolla.
 
 Valmiin sovelluksen release löytyy [täältä](https://github.com/riikkayoki/ot-harjoitustyo/releases/tag/finalproject).
 
-## Dokumentatio
+## Dokumentaatio
 
 
 * [Käyttöohje](https://github.com/riikkayoki/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
